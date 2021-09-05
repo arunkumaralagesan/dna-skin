@@ -1,0 +1,25 @@
+.services-card__wrapper {
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px 0 rgba(54, 54, 54, 0.06);
+  background-color: #fff;
+  width: 360px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.services-card__image {
+  margin-bottom: 30px;
+  margin-top: 20px;
+  width: 320px;
+  border-radius: 20px;
+}
+
+.services-card__title {
+  color: var(--secondary-color);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}

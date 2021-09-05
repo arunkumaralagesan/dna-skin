@@ -1,0 +1,268 @@
+.main-banner {
+  display: flex;
+  padding: 5rem 2rem;
+  position: relative;
+}
+
+.main-banner__left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-banner__right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.main-banner--dark {
+  color: var(--secondary-color);
+  font-size: 50px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.main-banner--green {
+  color: var(--primary-color);
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.main-banner--content {
+  font-size: 24px;
+  font-weight: 300;
+  text-align: left;
+  color: var(--content-color);
+  margin: 1rem 0 2rem 0;
+}
+
+.main-banner--learn-more {
+  margin: 1rem 0rem;
+}
+
+.main-banner__watermark {
+  font-size: 400px;
+  font-weight: 600;
+  text-align: left;
+  color: #f8fbfe;
+  position: absolute;
+  bottom: 10%;
+  left: -15%;
+  z-index: -1;
+  line-height: 0.3em;
+}
+
+.main-banner__image {
+  object-fit: contain;
+  width: 100%;
+}
+
+.awards {
+  padding: 4rem 2rem;
+}
+
+.awards__title {
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.awards__content {
+  text-align: center;
+  color: var(--content-color);
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.awards__images {
+  display: flex;
+  justify-content: space-between;
+  margin: 6rem 4rem 4rem 4rem;
+}
+
+.services-container {
+  background-color: var(--background-grey);
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.services__title {
+  color: var(--secondary-color);
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.services__cards {
+  display: flex;
+  flex-wrap: wrap;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  column-gap: 44px;
+  row-gap: 40px;
+  place-items: center;
+}
+
+.services__view-all {
+  margin: 4rem 0rem 6rem 0rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services__half-top {
+  position: absolute;
+  bottom: 0px;
+  width: 260px;
+  height: 130px;
+}
+
+.services__half-bottom {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 180px;
+  height: 100px;
+  transform: rotate(220deg);
+}
+
+.founder {
+  display: flex;
+  position: relative;
+}
+
+.founder__container {
+  display: flex;
+}
+
+.founder__wrapper-left {
+  width: 80%;
+  position: absolute;
+  height: 100%;
+  background-color: #f8fafb;
+  z-index: -1;
+}
+
+.founder__wrapper-right {
+  width: 20%;
+  height: 100%;
+  right: 0px;
+  position: absolute;
+  background-image: linear-gradient(to top, #36bbad, #41d8ba);
+
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.founder__left {
+  width: 70%;
+  padding: 10rem 0;
+  background-color: #f8fafb;
+}
+
+.founder__title {
+  color: var(--secondary-color);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+.founder__name {
+  color: var(--primary-color);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+.founder__info {
+  font-size: 22px;
+  font-weight: normal;
+  text-align: left;
+  line-height: 1.64;
+  color: var(--content-color);
+  padding: 2rem 0;
+}
+
+.founder__follow {
+  text-align: left;
+  color: #bfbfbf;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.founder__insta-wrapper {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding-top: 1rem;
+}
+
+.founder__insta {
+  color: var(--secondary-color);
+  font-size: 24px;
+  line-height: 1.5;
+  padding-left: 1rem;
+}
+
+.founder__insta-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.founder__right {
+  width: 30%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.founder__image {
+  width: 100%;
+  left: -50%;
+  position: relative;
+}
+
+.founder__image-circle {
+  width: 80px;
+  left: -70%;
+  bottom: 10%;
+  position: relative;
+  align-self: flex-end;
+}
+
+.our-story {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.our-story__title {
+  color: var(--secondary-color);
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.our-story__content {
+  color: var(--content-color);
+  font-size: 22px;
+  font-weight: 300;
+  width: 80%;
+  align-self: center;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.45;
+}
+
+.our-story__know-more {
+  margin: 4rem 0rem 6rem 0rem;
+  margin-left: auto;
+  margin-right: auto;
+}

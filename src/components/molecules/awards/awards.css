@@ -1,0 +1,51 @@
+.award-image__container-wrapper {
+  width: 47%;
+  border-radius: 20px;
+  border: solid 2px #adc9d3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: center;
+} 
+
+.award-image__stamp {
+  position: absolute;
+  width: 120px;
+  top: -55px;
+  left: -55px;
+}
+
+.award-container__title {
+  color: var(--primary-color);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.award-container__content {
+  color: var(--content-color);
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.award-image__main {
+  width: 90%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 18px;
+}
+
+.award-container__title {
+  margin: 0 3rem 2rem 3rem;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.award-container__content {
+  margin: 0 3rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  font-size: 22px;
+  line-height: 1.45;
+}

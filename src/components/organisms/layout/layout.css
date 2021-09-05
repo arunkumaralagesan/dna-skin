@@ -1,0 +1,4 @@
+.layout__children {
+  margin-top: var(--header-height);
+  overflow-x: hidden;
+}

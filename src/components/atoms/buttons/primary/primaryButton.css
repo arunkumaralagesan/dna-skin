@@ -1,0 +1,20 @@
+.primary-button {
+  width: 250px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-image: linear-gradient(to top, #36bbad, #41d8ba);
+  cursor: pointer;
+}
+
+.primary-button > span {
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.26px;
+  color: white;
+}
