@@ -95,6 +95,7 @@
   font-weight: 600;
   text-align: center;
   padding: 4rem 0;
+  text-transform: uppercase;
 }
 
 .services__cards {
@@ -240,6 +241,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-content: center;
   margin-top: 5rem;
 }
 
@@ -248,6 +250,7 @@
   font-size: 36px;
   font-weight: 600;
   margin-bottom: 2rem;
+  text-transform: uppercase
 }
 
 .our-story__content {
@@ -262,7 +265,197 @@
 }
 
 .our-story__know-more {
-  margin: 4rem 0rem 6rem 0rem;
+  margin: 3rem 0rem 4rem 0rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.our-story__video-player-wrapper {
+  border: solid 16px #d4eee7;
+  background-color: #d4eee7;
+  width: 80%;
+  height: 500px;
+  align-self: center;
+  border-radius: 20px;
+  margin-bottom: 5rem;
+}
+
+.our-story__video-player-wrapper > div {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 8px !important;
+}
+
+.our-story__video-player-wrapper iframe {
+  border-radius: 8px !important;
+}
+
+.testimonials-container {
+  background-color: var(--background-grey);
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+.testimonials__title {
+  color: var(--secondary-color);
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+}
+
+.testimonials__videos-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  column-gap: 84px;
+  row-gap: 30px;
+  place-items: center;
+}
+
+.testimonials__more-video {
+  margin: 3rem 0rem 4rem 0rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+  /*--------------------- MAIN BANNER ------------------------*/
+  .main-banner {
+    display: flex;
+    flex-direction: column;
+    padding: unset;
+    position: relative;
+  }
+
+  .main-banner__left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .main-banner__right {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-banner--dark {
+    font-size: 36px;
+    font-weight: 600;
+    font-stretch: normal;
+    text-align: center;
+  }
+
+  .main-banner--green {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .main-banner--content {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+  }
+
+  .main-banner--learn-more {
+    margin: 1rem 0rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-banner__watermark {
+    font-size: 12rem;
+    font-weight: 600;
+    text-align: left;
+    color: #f8fbfe;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    z-index: -1;
+    line-height: 0.3em;
+  }
+
+  .main-banner__image {
+    object-fit: contain;
+    width: 90%;
+    margin-top: 2rem;
+  }
+
+  /*--------------------- MAIN BANNER END------------------------*/
+
+  /*--------------------- AWARDS -------------------------------*/
+
+  .awards {
+    padding: 4rem 2rem 2rem 2rem;
+  }
+
+  .awards__title {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .awards__content {
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 0.5rem;
+  }
+
+  .awards__images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0rem;
+  }
+
+  /*--------------------- AWARDS END------------------------*/
+
+  /*--------------------- SERVICES------------------------*/
+
+  .services__title {
+    color: var(--secondary-color);
+    font-size: 30px;
+    padding: 3rem 0;
+  }
+
+  .services__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    column-gap: 12px;
+    row-gap: 40px;
+    place-items: center;
+  }
+
+  .services__view-all {
+    margin: 4rem 0rem 6rem 0rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .services__half-top {
+    position: absolute;
+    bottom: 0px;
+    width: 130px;
+    height: 60px;
+  }
+
+  .services__half-bottom {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 130px;
+    height: 50px;
+    transform: rotate(220deg);
+  }
 }

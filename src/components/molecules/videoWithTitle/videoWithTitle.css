@@ -1,0 +1,15 @@
+.with-title__video-player {
+  margin: 2rem;
+  width: 100%;
+  height: 300px;
+}
+
+.with-title__video-player > div {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 8px !important;
+}
+
+.with-title__video-player iframe {
+  border-radius: 8px !important;
+}

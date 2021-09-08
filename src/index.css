@@ -50,4 +50,9 @@
   :root {
     --header-height: 120px;
   }
+
+  .wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

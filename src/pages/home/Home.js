@@ -1,30 +1,28 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React, { Component } from "react";
+import ReactPlayer from 'react-player'
 import _map from "lodash/map";
 import Layout from "../../components/organisms/layout";
 
 import PrimaryButton from "../../components/atoms/buttons/primary";
 import Awards from "../../components/molecules/awards";
-import ServicesCard from "../../components/molecules/awards/servicesCard/ServicesCard";
+import ServicesCard from "../../components/molecules/servicesCard/ServicesCard";
 
-import { SERVICES } from "./constants";
+import { SERVICES, MAIN_TITLE_1, MAIN_TITLE_2, MAIN_CONTENT_1, TESTIMONIAL_VIDEOS, RATING_DETAILS } from "./constants";
+import { isMobileDevice } from "../../helpers/utils";
 
 import "./home.css";
+import VideoWithTitle from "../../components/molecules/videoWithTitle/VideoWithTitle";
+import RatingsCard from '../../components/molecules/ratingsCard';
 
 class Home extends Component {
   renderMainBanner() {
-    const titleMain = "Don’t miss out on our holistic programmes,";
-    const titleSecond = "DNA360 is now live!";
-    const shortContent =
-      "Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor.";
-    const content =
-      "Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor. incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. ";
     return (
       <section className="main-banner wrapper">
         <div className="main-banner__left">
-          <p className="main-banner--dark">{titleMain}</p>
-          <p className="main-banner--green">{titleSecond}</p>
-          <p className="main-banner--content">{shortContent}</p>
+          <p className="main-banner--dark">{MAIN_TITLE_1}</p>
+          <p className="main-banner--green">{MAIN_TITLE_2}</p>
+          <p className="main-banner--content">{MAIN_CONTENT_1}</p>
           <PrimaryButton
             text="Learn More"
             className="main-banner--learn-more"
@@ -38,6 +36,30 @@ class Home extends Component {
           />
         </div>
         <div className="main-banner__watermark">DNA</div>
+      </section>
+    );
+  }
+
+  renderMobileMainBanner() {
+    return (
+      <section className="main-banner wrapper">
+        <div className="main-banner__left">
+          <p className="main-banner--dark">{MAIN_TITLE_1}</p>
+          <p className="main-banner--green">{MAIN_TITLE_2}</p>
+          <p className="main-banner--content">{MAIN_CONTENT_1}</p>
+          <PrimaryButton
+            text="Learn More"
+            className="main-banner--learn-more"
+          />
+          <div className="main-banner__watermark">DNA</div>
+        </div>
+        <div className="main-banner__right">
+          <img
+            className="main-banner__image"
+            alt="DNA Skin"
+            src="/images/landing/banner-main.png"
+          />
+        </div>
       </section>
     );
   }
@@ -142,20 +164,70 @@ class Home extends Component {
     );
   }
 
+  renderStoryVideo() {
+    return (
+      <div className="our-story__video-player-wrapper">
+        <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
+      </div>
+    );
+  }
+
   renderOurStory() {
     return (
       <section className="our-story wrapper">
         <p className="our-story__title">Our Story</p>
-        <p class="our-story__content">
+        <p className="our-story__content">
           At DNA, honesty, ethical practice, patient’s services and mutual
           respect are the main pillars that drive us. We put our patients first
           and always come up with tailor-made solutions and treatments.
         </p>
         <PrimaryButton text="Know More" className="our-story__know-more" />
+        {this.renderStoryVideo()}
       </section>
     );
   }
+
+  renderTestimonials() {
+    return (
+      <section className="testimonials-container">
+        <div className="wrapper">
+          <div className="testimonials">
+            <p className="testimonials__title">Testimonials</p>
+            <div className="testimonials__videos-wrapper">
+              {_map(TESTIMONIAL_VIDEOS, video => <VideoWithTitle {...video} />)}
+            </div>
+            <PrimaryButton text="More Videos" className="testimonials__more-video" />
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  renderRatingsAndReviews() {
+    return (
+      <section className="ratings wrapper">
+        <p className="ratings__title">Ratings and Reviews</p>
+        {_map(RATING_DETAILS, rating => <RatingsCard {...rating} />)}
+      </section>
+    );
+  }
+  renderMobileView() {
+    return (
+      <Layout>
+        {this.renderMobileMainBanner()}
+        {this.renderAwards()}
+        {this.renderServicesWeOffer()}
+        {/* {this.renderAppointmentForm()} */}
+        {this.renderFounderDetails()}
+      </Layout>
+    );
+  }
+
   render() {
+    const isMobile = isMobileDevice();
+    console.log({ isMobile });
+    if (isMobile) return this.renderMobileView();
+
     return (
       <Layout>
         {this.renderMainBanner()}
@@ -164,8 +236,8 @@ class Home extends Component {
         {/* {this.renderAppointmentForm()} */}
         {this.renderFounderDetails()}
         {this.renderOurStory()}
-        {/* {this.renderTestimonials()}
-        {this.renderRatingsAndReviews()} */}
+        {this.renderTestimonials()}
+        {this.renderRatingsAndReviews()}
       </Layout>
     );
   }

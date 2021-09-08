@@ -10,7 +10,7 @@ function ServicesCard({ url, title, onClick }) {
         alt={title}
         src={url}
       />
-      <p class="services-card__title">
+      <p className="services-card__title">
         {title}
       </p>
     </div>

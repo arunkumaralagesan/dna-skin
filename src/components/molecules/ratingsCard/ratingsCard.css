@@ -1,0 +1,26 @@
+.ratings-card__container {
+  border: solid 2px #e3e9ec;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.ratings-card__logo {
+  width: 200px;
+  height: 40px;
+}
+
+.ratings__info {
+  display: flex;
+}
+
+.ratings__aggregate {
+  color: var(--secondary-color);
+  font-size: 48px;
+  font-weight: 500;
+  font-stretch: normal;
+}
+
+.ratings__star-container {
+  color: var(--primary-color);
+}

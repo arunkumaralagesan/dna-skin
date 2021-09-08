@@ -59,7 +59,7 @@ class Header extends Component {
 
   renderSiteMaps() {
     return (
-      <div class="site-map-wrapper">
+      <div className="site-map-wrapper">
         {_map(SITE_MAP, (page) => this.renderSiteTitle(page))}
       </div>
     );
