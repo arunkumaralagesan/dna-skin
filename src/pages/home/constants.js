@@ -37,20 +37,24 @@ export const FOUNDER_INFO =
 
 export const TESTIMONIAL_VIDEOS = [
   {
-    title: "Mr. Mohamad",
-    url: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
+    title: "Mr. Mohammad Ziad (treated for severe Psoriasis)",
+    url: 'https://youtu.be/ENsncNB8YLk',
+    thumbnail: 'https://img.youtube.com/vi/ENsncNB8YLk/mqdefault.jpg',
   },
   {
-    title: "Mr. Mohamad",
-    url: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
+    title: "Mrs. Rashmi ( came for acne scars)",
+    url: 'https://youtu.be/D6tMkxCU5p4',
+    thumbnail: 'https://img.youtube.com/vi/D6tMkxCU5p4/mqdefault.jpg',
   },
   {
-    title: "Mr. Mohamad",
-    url: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
+    title: "Miss. Sangee ( pigmentation & uneven skin tone)",
+    url: 'https://youtu.be/O1op_rCMjDs',
+    thumbnail: 'https://img.youtube.com/vi/O1op_rCMjDs/mqdefault.jpg',
   },
   {
-    title: "Mr. Mohamad",
-    url: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
+    title: "Mr. Magunta Srinuvasulu Reddy, Ex MP and current MLC",
+    url: 'https://youtu.be/gUVwAIsMcME',
+    thumbnail: 'https://img.youtube.com/vi/gUVwAIsMcME/mqdefault.jpg',
   },
 ];
 
@@ -65,4 +69,31 @@ export const RATING_DETAILS = [
     aggregate: 4.3,
     total: 234,
   }
+];
+
+export const REVIEW_DETAILS = [
+  {
+    url: "/images/landing/hair-loss.png",
+    name: 'Noodhana Rachel',
+    aggregate: 4.5,
+    content: 'They care as mother while v r with them thanks for ur love and care and the staffs in clinic made the surrounding alive with their friendly behaviour. Hope to come again and visit once for this hopefully therapy.',
+  },
+  {
+    url: "/images/landing/hair-loss.png",
+    name: 'Noodhana Rachel',
+    aggregate: 4.5,
+    content: 'They care as mother while v r with them thanks for ur love and care and the staffs in clinic made the surrounding alive with their friendly behaviour. Hope to come again and visit once for this hopefully therapy.',
+  },
+  {
+    url: "/images/landing/hair-loss.png",
+    name: 'Noodhana Rachel',
+    aggregate: 4.5,
+    content: 'They care as mother while v r with them thanks for ur love and care and the staffs in clinic made the surrounding alive with their friendly behaviour. Hope to come again and visit once for this hopefully therapy.',
+  },
+  {
+    url: "/images/landing/hair-loss.png",
+    name: 'Noodhana Rachel',
+    aggregate: 4.5,
+    content: 'They care as mother while v r with them thanks for ur love and care and the staffs in clinic made the surrounding alive with their friendly behaviour. Hope to come again and visit once for this hopefully therapy.',
+  },
 ];

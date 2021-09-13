@@ -2,16 +2,19 @@
   border: solid 2px #e3e9ec;
   background-color: #fff;
   border-radius: 20px;
-  padding: 1rem;
+  padding: 1.5rem 2rem 0.5rem 2rem;
+  min-width: 400px;
+  margin: 1rem 0rem;
 }
 
 .ratings-card__logo {
-  width: 200px;
-  height: 40px;
+  width: 130px;
 }
 
 .ratings__info {
   display: flex;
+  align-items: center;
+  padding-top: 1rem;
 }
 
 .ratings__aggregate {
@@ -23,4 +26,34 @@
 
 .ratings__star-container {
   color: var(--primary-color);
+  font-size: 32px;
+  padding: 0 2rem;
+}
+
+.ratings__total-count {
+  font-size: 20px;
+  color: var(--content-color);
+  line-height: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .ratings-card__container {
+    min-width: unset;
+    width: 100%;
+  }
+  .ratings__aggregate {
+    font-size: 26px;
+  }
+  .ratings__star-container {
+    font-size: 24px;
+    padding: 0 1rem;
+  }
+  .ratings__total-count {
+    font-size: 16px;
+    display: block;
+    padding: 1rem 0rem;
+  }
+  .ratings__info {
+    display: block;
+  }
 }

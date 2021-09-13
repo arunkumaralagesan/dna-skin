@@ -1,0 +1,16 @@
+.review__carousel {
+  padding-bottom: 4rem;
+  margin-left: -1rem;
+}
+
+.review__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review__controls--left, .review__controls--right {
+  width: 50px;
+  margin: 1rem;
+  cursor: pointer;
+}

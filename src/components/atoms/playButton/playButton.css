@@ -1,0 +1,50 @@
+.play__wrapper {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.play__outer {
+  width: 121px;
+  height: 121px;
+  object-fit: contain;
+  border-radius: 65px;
+  border: solid 2px #fff;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.small {
+  width: 70px;
+  height: 70px;
+}
+
+.play__inner {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  object-fit: contain;
+  background-color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play__icon {
+  width: 30%;
+}
+
+@media screen and (max-width: 768px) {
+  .play__outer {
+    height: 80px;
+    width: 80px;
+  }
+
+  .small {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -8,12 +8,16 @@ import PrimaryButton from "../../components/atoms/buttons/primary";
 import Awards from "../../components/molecules/awards";
 import ServicesCard from "../../components/molecules/servicesCard/ServicesCard";
 
-import { SERVICES, MAIN_TITLE_1, MAIN_TITLE_2, MAIN_CONTENT_1, TESTIMONIAL_VIDEOS, RATING_DETAILS } from "./constants";
+import { SERVICES, MAIN_TITLE_1, MAIN_TITLE_2, MAIN_CONTENT_1, TESTIMONIAL_VIDEOS, RATING_DETAILS, REVIEW_DETAILS } from "./constants";
 import { isMobileDevice } from "../../helpers/utils";
 
 import "./home.css";
 import VideoWithTitle from "../../components/molecules/videoWithTitle/VideoWithTitle";
 import RatingsCard from '../../components/molecules/ratingsCard';
+import ReviewCarousel from './components/reviewCarousel';
+import AppointmentForm from './components/appointmentForm';
+
+import { VideoWithCenterPlay } from '../../components/molecules/videoWithTitle/VideoWithTitle';
 
 class Home extends Component {
   renderMainBanner() {
@@ -167,7 +171,10 @@ class Home extends Component {
   renderStoryVideo() {
     return (
       <div className="our-story__video-player-wrapper">
-        <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
+        <VideoWithCenterPlay
+          url='https://www.youtube.com/watch?v=eAQIqSUcZK8'
+          thumbnail='https://img.youtube.com/vi/eAQIqSUcZK8/mqdefault.jpg'
+        />
       </div>
     );
   }
@@ -207,18 +214,33 @@ class Home extends Component {
     return (
       <section className="ratings wrapper">
         <p className="ratings__title">Ratings and Reviews</p>
-        {_map(RATING_DETAILS, rating => <RatingsCard {...rating} />)}
+        <div className="rating__cards">
+          {_map(RATING_DETAILS, rating => <RatingsCard {...rating} />)}
+        </div>
+        <ReviewCarousel />
       </section>
     );
   }
+
+  renderAppointmentForm() {
+    return (
+      <section className="wrapper form-wrapper">
+        <AppointmentForm />
+      </section>
+    );
+  }
+
   renderMobileView() {
     return (
       <Layout>
         {this.renderMobileMainBanner()}
         {this.renderAwards()}
         {this.renderServicesWeOffer()}
-        {/* {this.renderAppointmentForm()} */}
+        {this.renderAppointmentForm()}
         {this.renderFounderDetails()}
+        {this.renderOurStory()}
+        {this.renderTestimonials()}
+        {this.renderRatingsAndReviews()}
       </Layout>
     );
   }
@@ -233,7 +255,7 @@ class Home extends Component {
         {this.renderMainBanner()}
         {this.renderAwards()}
         {this.renderServicesWeOffer()}
-        {/* {this.renderAppointmentForm()} */}
+        {this.renderAppointmentForm()}
         {this.renderFounderDetails()}
         {this.renderOurStory()}
         {this.renderTestimonials()}
