@@ -1,7 +1,7 @@
 export const SERVICES = [
   {
     title: "ACNE",
-    url: "/images/landing/scars.png",
+    url: "/images/landing/acne.png",
   },
   {
     title: "SCARS",

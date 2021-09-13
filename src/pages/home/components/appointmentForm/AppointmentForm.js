@@ -92,7 +92,7 @@ export class AppointmentForm extends Component {
     const isMobile = isMobileDevice();
     const { formValues } = this.state;
     console.log({ formValues })
-    if (isMobile) return null;
+    // if (isMobile) return null;
     return (
       <div className="form-container">
         <div class="form__title">

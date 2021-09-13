@@ -23,3 +23,13 @@
   font-weight: 600;
   margin-bottom: 30px;
 }
+
+@media screen and (max-width: 768px)  {
+  .services-card__wrapper {
+    width: 320px;
+  }
+
+  .services-card__image {
+    width: 280px;
+  }
+}

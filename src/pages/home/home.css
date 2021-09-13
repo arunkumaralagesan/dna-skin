@@ -117,18 +117,16 @@
 
 .services__half-top {
   position: absolute;
-  bottom: 0px;
-  width: 260px;
-  height: 130px;
+  bottom: -90px;
+  left: -60px;
+  width: 230px;
 }
 
 .services__half-bottom {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 180px;
-  height: 100px;
-  transform: rotate(220deg);
+  top: -90px;
+  right: -60px;
+  width: 230px;
 }
 
 .founder {
@@ -384,7 +382,7 @@
   }
 
   .main-banner--dark {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 600;
     font-stretch: normal;
     text-align: center;
@@ -473,25 +471,23 @@
   }
 
   .services__view-all {
-    margin: 4rem 0rem 6rem 0rem;
+    margin: 4rem 0rem 4rem 0rem;
     margin-left: auto;
     margin-right: auto;
   }
 
   .services__half-top {
     position: absolute;
-    bottom: 0px;
     width: 130px;
-    height: 60px;
+    bottom: -65px;
+    left: -50px;
   }
 
   .services__half-bottom {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: -65px;
+    right: -50px;
     width: 130px;
-    height: 50px;
-    transform: rotate(220deg);
   }
 
   .our-story__video-player-wrapper {

@@ -46,27 +46,27 @@
 
 @media screen and (max-width: 768px)  {
   .award-image__container-wrapper {
-    width: 85%;
+    width: 90%;
     margin: 1.5rem 0;
   } 
 
   .award-image__stamp {
     position: absolute;
-    width: 90px;
+    width: 80px;
     top: -40px;
     left: -40px;
   }
 
   .award-container__title {
     color: var(--primary-color);
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
     margin: 0rem;
   }
   
   .award-container__content {
     color: var(--content-color);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
     margin: 1rem 0.5rem;
   }

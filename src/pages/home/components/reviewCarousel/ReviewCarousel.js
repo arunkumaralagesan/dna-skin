@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import _map from "lodash/map";
 import { REVIEW_DETAILS } from "../../constants";
 import ReviewsCard from "../../../../components/molecules/reviewsCard";
+import { isMobileDevice } from "../../../../helpers/utils";
 
 import './reviewCarousel.css';
 
@@ -28,7 +29,8 @@ function ReviewCarousel() {
     }
   };
 
-  const getOffset = () => ref.current?.getBoundingClientRect()?.width * 0.9;
+  const isMobile = isMobileDevice();
+  const getOffset = () => isMobile ? 332 : ref.current?.getBoundingClientRect()?.width * 0.9;
   return (
     <div className="review__carousel">
       <div className="review__cards" ref={ref} onScroll={handleScroll}>

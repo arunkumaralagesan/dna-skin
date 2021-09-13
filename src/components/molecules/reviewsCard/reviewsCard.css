@@ -46,6 +46,7 @@
 @media screen and (max-width: 768px) {
   .reviews-card__container{
     width: 85% !important;
+    max-width: 300px !important;
   }
   .reviews-card__ratings-name {
     font-size: 18px;

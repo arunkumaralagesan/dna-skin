@@ -77,7 +77,7 @@ class Home extends Component {
         </p>
         <div className="awards__images">
           <Awards
-            url="/images/landing/global-business.png"
+            url="/images/landing/cosme.png"
             title="ASSOCHAM COSM’e India Awards 2017"
             content="Presented to DNA Skin Clinic for Best Skin & Hair Clinic of the year."
           />
@@ -106,12 +106,12 @@ class Home extends Component {
         <img
           className="services__half-top"
           alt="DNA Skin"
-          src="/images/common/circle-half-top.png"
+          src="/images/common/circle.png"
         />
         <img
           className="services__half-bottom"
           alt="DNA Skin"
-          src="/images/common/circle-half-top.png"
+          src="/images/common/circle.png"
         />
       </section>
     );
@@ -130,7 +130,7 @@ class Home extends Component {
           <img
             className="founder__image-circle"
             alt="circle"
-            src="/images/landing/award-stamp.png"
+            src="/images/common/circle-colored.png"
           />
         </div>
         <div className="wrapper founder__container">
