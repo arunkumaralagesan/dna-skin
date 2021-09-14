@@ -48,7 +48,7 @@ function Footer() {
 
   const renderClinic = () => {
     return (
-      <div>
+      <div className="section__wrapper">
         <p className="footer__title">Clinic</p>
         {_map(CLINIC, (item) => (
           <div className="footer_link">{item?.name}</div>
