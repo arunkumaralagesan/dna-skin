@@ -12,22 +12,54 @@ function Footer() {
     </div>
   );
 
+  const renderFollowUs = () => {
+    return (
+      <div>
+        <p className="footer__title">Follow Us:</p>
+        <div className="social-media__wrapper">
+          <a href="https://www.facebook.com/DNASkinClinicBangalore/">
+            <img
+              className="social-media__icon"
+              alt="DNA Skin"
+              src="/images/common/fb.png"
+            />
+          </a>
+          <a href="https://www.instagram.com/drpriyankareddy/">
+            <img
+              className="social-media__icon"
+              alt="DNA Skin"
+              src="/images/common/instagram.png"
+            />
+          </a>
+          <a href="https://www.youtube.com/channel/UCQLCc-NqiWSVcz2LdU4xZ_w?view_as=subscriber">
+            <img
+              className="social-media__icon"
+              alt="DNA Skin"
+              src="/images/common/yt.png"
+            />
+          </a>
+        </div>
+      </div>
+    );
+  };
+
   const renderLogo = () => {
     return (
-        <img
-          className="footer__logo"
-          alt="DNA Skin"
-          src="/images/common/logo-white.png"
-        />
+      <img
+        className="footer__logo"
+        alt="DNA Skin"
+        src="/images/common/logo-white.png"
+      />
     );
-  }
+  };
 
   const renderCallUs = () => {
     return (
       <div>
         <p className="footer__title">Call Us:</p>
         <p className="footer__content">
-        +91 73384 44555
+          <div>+91 73380 10101</div>
+          <div>+91 73384 44555</div>
         </p>
       </div>
     );
@@ -94,8 +126,13 @@ function Footer() {
         {renderAddress()}
         {renderMap()}
       </div>
-      {renderCallUs()}
+      <div className="footer-row">
+        {renderCallUs()}
+        {renderFollowUs()}
+      </div>
+      <div className="pull-left">
       {renderLogo()}
+      </div>
       {renderCopyRight()}
     </>
   );

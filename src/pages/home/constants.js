@@ -39,22 +39,22 @@ export const TESTIMONIAL_VIDEOS = [
   {
     title: "Mr. Mohammad Ziad (treated for severe Psoriasis)",
     url: 'https://youtu.be/ENsncNB8YLk',
-    thumbnail: 'https://img.youtube.com/vi/ENsncNB8YLk/mqdefault.jpg',
+    thumbnail: 'https://img.youtube.com/vi/ENsncNB8YLk/maxresdefault.jpg',
   },
   {
     title: "Mrs. Rashmi ( came for acne scars)",
     url: 'https://youtu.be/D6tMkxCU5p4',
-    thumbnail: 'https://img.youtube.com/vi/D6tMkxCU5p4/mqdefault.jpg',
+    thumbnail: 'https://img.youtube.com/vi/D6tMkxCU5p4/maxresdefault.jpg',
   },
   {
     title: "Miss. Sangee ( pigmentation & uneven skin tone)",
     url: 'https://youtu.be/O1op_rCMjDs',
-    thumbnail: 'https://img.youtube.com/vi/O1op_rCMjDs/mqdefault.jpg',
+    thumbnail: 'https://img.youtube.com/vi/O1op_rCMjDs/maxresdefault.jpg',
   },
   {
     title: "Mr. Magunta Srinuvasulu Reddy, Ex MP and current MLC",
     url: 'https://youtu.be/gUVwAIsMcME',
-    thumbnail: 'https://img.youtube.com/vi/gUVwAIsMcME/mqdefault.jpg',
+    thumbnail: "/images/landing/magunta.png",
   },
 ];
 
@@ -73,27 +73,27 @@ export const RATING_DETAILS = [
 
 export const REVIEW_DETAILS = [
   {
-    url: "/images/landing/hair-loss.png",
+    url: "/images/landing/noodhana.png",
     name: 'Noodhana Rachel',
     aggregate: 4.5,
     content: 'They care as mother while v r with them thanks for ur love and care and the staffs in clinic made the surrounding alive with their friendly behaviour. Hope to come again and visit once for this hopefully therapy.',
   },
   {
-    url: "/images/landing/hair-loss.png",
+    url: "/images/landing/suman.png",
     name: 'Noodhana Rachel',
     aggregate: 4.5,
-    content: 'They care as mother while v r with them thanks for ur love and care and the staffs in clinic made the surrounding alive with their friendly behaviour. Hope to come again and visit once for this hopefully therapy.',
+    content: 'Visited this clinic for wart removal. Dr sajini did my procedure, she did it very quickly dint make me wait and the experience was worth paying. Highly recommend this place and dr. Thank you.',
+  },
+  {
+    url: "/images/landing/amjad.png",
+    name: 'Noodhana Rachel',
+    aggregate: 4.5,
+    content: 'I consulted Dr. Sajini for Wart on my hand and she responded instant and treated it accordingly. I am totally convinced the way she removed it. I recommend this doctor. Thanks.',
   },
   {
     url: "/images/landing/hair-loss.png",
     name: 'Noodhana Rachel',
     aggregate: 4.5,
-    content: 'They care as mother while v r with them thanks for ur love and care and the staffs in clinic made the surrounding alive with their friendly behaviour. Hope to come again and visit once for this hopefully therapy.',
-  },
-  {
-    url: "/images/landing/hair-loss.png",
-    name: 'Noodhana Rachel',
-    aggregate: 4.5,
-    content: 'They care as mother while v r with them thanks for ur love and care and the staffs in clinic made the surrounding alive with their friendly behaviour. Hope to come again and visit once for this hopefully therapy.',
+    content: 'I consulted Dr. Sajini for Wart on my hand and she responded instant and treated it accordingly. I am totally convinced the way she removed it. I recommend this doctor. Thanks.',
   },
 ];

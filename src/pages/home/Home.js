@@ -71,7 +71,7 @@ class Home extends Component {
   renderAwards() {
     return (
       <section className="awards wrapper">
-        <p className="awards__title">Awards And Recognitions</p>
+        <div className="awards__title">Awards And Recognitions</div>
         <p className="awards__content">
           When Clients Come First, Awards Follow
         </p>
@@ -95,7 +95,7 @@ class Home extends Component {
     return (
       <section className="services-container">
         <div className="services wrapper">
-          <p className="services__title">Services We Offer</p>
+          <div className="services__title">Services We Offer</div>
           <div className="services__cards">
             {_map(SERVICES, (service) => (
               <ServicesCard {...service} />
@@ -159,7 +159,7 @@ class Home extends Component {
                 alt="insta"
                 className="founder__insta-logo"
               />
-              <p className="founder__insta">drpriyankareddy</p>
+              <div className="founder__insta">drpriyankareddy</div>
             </a>
           </div>
           <div className="founder__right"></div>
@@ -173,7 +173,7 @@ class Home extends Component {
       <div className="our-story__video-player-wrapper">
         <VideoWithCenterPlay
           url='https://www.youtube.com/watch?v=eAQIqSUcZK8'
-          thumbnail='https://img.youtube.com/vi/eAQIqSUcZK8/mqdefault.jpg'
+          thumbnail='https://img.youtube.com/vi/eAQIqSUcZK8/maxresdefault.jpg'
         />
       </div>
     );

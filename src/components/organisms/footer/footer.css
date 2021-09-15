@@ -63,6 +63,27 @@
   margin-bottom: 1.5rem;
 }
 
+.social-media__icon {
+  height: 40px;
+  margin: 0.5rem;
+}
+
+.social-media__wrapper {
+  display: flex;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pull-left {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
 @media screen and (max-width: 768px) {
   .footer {
     padding: 2rem 1rem 0rem 1rem;
@@ -84,5 +105,9 @@
   .copy-right {
     font-size: 14px;
     text-align: center;
+  }
+
+  .footer__logo {
+    margin: 1rem 0rem;
   }
 }

@@ -86,4 +86,12 @@
     height: initial;
     position: relative;
   }
+
+  .video__title {
+    font-size: 16px;
+  }
+
+  .video__info {
+    padding: 1rem;
+  }
 }

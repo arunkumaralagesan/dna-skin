@@ -68,6 +68,7 @@
   color: var(--secondary-color);
   font-size: 36px;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .awards__content {
@@ -118,7 +119,7 @@
 .services__half-top {
   position: absolute;
   bottom: -90px;
-  left: -60px;
+  left: -20px;
   width: 230px;
 }
 
@@ -498,5 +499,13 @@
   .testimonials__videos-wrapper {
     grid-template-columns: unset;
     place-items: center;
+  }
+
+  .our-story__title {
+    font-size: 30px;
+  }
+
+  .our-story__content {
+    font-size: 20px;
   }
 }

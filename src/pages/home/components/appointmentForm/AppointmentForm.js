@@ -184,7 +184,7 @@ export class AppointmentForm extends Component {
             type="submit"
             value="Submit"
           >
-            <strong>SEND REQUEST</strong>
+            <strong>Send Request</strong>
           </button>
         </form>
       </div>
