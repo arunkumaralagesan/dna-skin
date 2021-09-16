@@ -6,6 +6,8 @@ import _includes from "lodash/includes";
 import { isMobileDevice } from "../../../helpers/utils";
 
 import { SITE_MAP } from "./constants";
+import { PHONES } from "../../../constants/general";
+
 import "./header.css";
 import cx from "classnames";
 
@@ -37,11 +39,11 @@ class Header extends Component {
           alt="phone"
         />
         <div className="header__phone-number-wrapper">
-          <a className="header__phone-number" href={`tel: ${KARNATAKA_NUMBER}`}>
-            {`+91 ` + KARNATAKA_NUMBER}
+          <a className="header__phone-number" href={`tel: ${PHONES.ONE}`}>
+            {`+91 ` + PHONES.ONE}
           </a>
-          <a className="header__phone-number" href={`tel: ${KARNATAKA_NUMBER}`}>
-            {`+91 ` + KARNATAKA_NUMBER}
+          <a className="header__phone-number" href={`tel: ${PHONES.TWO}`}>
+            {`+91 ` + PHONES.TWO}
           </a>
         </div>
       </div>
@@ -51,7 +53,7 @@ class Header extends Component {
   renderMobilePhoneContainer() {
     return (
       <div className="header__phone-mobile-container">
-        <a className="header__phone-number" href={`tel: ${KARNATAKA_NUMBER}`}>
+        <a className="header__phone-number" href={`tel: ${PHONES.ONE}`}>
           <img
             className="header__phone"
             src="/images/common/phone-big.png"

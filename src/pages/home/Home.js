@@ -135,7 +135,7 @@ class Home extends Component {
         </div>
         <div className="wrapper founder__container">
           <div className="founder__left">
-            <p className="founder__title">About Our Founder</p>
+            <div className="founder__title">About Our Founder</div>
             <p className="founder__name">DR. PRIYANKA REDDY</p>
             <p className="founder__info">
               Dr. Priyanka Reddy (M.B.B.S, M.D;D.V.L, Fellowship in Cosmetology
@@ -182,7 +182,7 @@ class Home extends Component {
   renderOurStory() {
     return (
       <section className="our-story wrapper">
-        <p className="our-story__title">Our Story</p>
+        <div className="our-story__title">Our Story</div>
         <p className="our-story__content">
           At DNA, honesty, ethical practice, patient’s services and mutual
           respect are the main pillars that drive us. We put our patients first
@@ -199,7 +199,7 @@ class Home extends Component {
       <section className="testimonials-container">
         <div className="wrapper">
           <div className="testimonials">
-            <p className="testimonials__title">Testimonials</p>
+            <div className="testimonials__title">Testimonials</div>
             <div className="testimonials__videos-wrapper">
               {_map(TESTIMONIAL_VIDEOS, video => <VideoWithTitle {...video} />)}
             </div>

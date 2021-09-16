@@ -3,6 +3,7 @@ import _map from "lodash/map";
 import { CLINIC, DISCOVER } from "./constants";
 import "./footer.css";
 
+import { PHONES } from "../../../constants/general";
 import { isMobileDevice } from "../../../helpers/utils";
 
 function Footer() {
@@ -15,7 +16,7 @@ function Footer() {
   const renderFollowUs = () => {
     return (
       <div>
-        <p className="footer__title">Follow Us:</p>
+        <div className="footer__title">Follow Us:</div>
         <div className="social-media__wrapper">
           <a href="https://www.facebook.com/DNASkinClinicBangalore/">
             <img
@@ -56,10 +57,14 @@ function Footer() {
   const renderCallUs = () => {
     return (
       <div>
-        <p className="footer__title">Call Us:</p>
-        <p className="footer__content">
-          <div>+91 73380 10101</div>
-          <div>+91 73384 44555</div>
+        <div className="footer__title">Call Us:</div>
+        <p className="footer__phone-wrapper">
+          <a className="footer__phone-number" href={`tel: ${PHONES.ONE}`}>
+            {`+91 ` + PHONES.ONE}
+          </a>
+          <a className="footer__phone-number" href={`tel: ${PHONES.TWO}`}>
+            {`+91 ` + PHONES.TWO}
+          </a>
         </p>
       </div>
     );
@@ -68,8 +73,8 @@ function Footer() {
   const renderAddress = () => {
     return (
       <div>
-        <p className="footer__title">Address</p>
-        <p className="footer__content">
+        <div className="footer__title">Address</div>
+        <p className="footer__content address__content">
           803, Promenade, 2nd Cross, 80 Feet Road, Opp. Banaswadi Sub Registrar
           Office, HRBR Layout 1st Block, Kalyan Nagar, Bengaluru, Karnataka
           560043
@@ -81,7 +86,7 @@ function Footer() {
   const renderClinic = () => {
     return (
       <div className="section__wrapper">
-        <p className="footer__title">Clinic</p>
+        <div className="footer__title">Clinic</div>
         {_map(CLINIC, (item) => (
           <div className="footer_link">{item?.name}</div>
         ))}
@@ -92,7 +97,7 @@ function Footer() {
   const renderDiscover = () => {
     return (
       <div>
-        <p className="footer__title">Discover</p>
+        <div className="footer__title">Discover</div>
         {_map(DISCOVER, (item) => (
           <div className="footer_link">{item?.name}</div>
         ))}
@@ -139,16 +144,30 @@ function Footer() {
 
   const renderWebFooter = () => (
     <>
-      <div className="footer__links">
-        {renderClinic()}
-        {renderDiscover()}
-      </div>
-      <div className="address_wrapper">
+      <div className="footer-wrapper__web">
+        <div className="footer__column section-1">
+          {renderClinic()}
+          {renderLogo()}
+        </div>
+        <div className="footer__column section-2">
+          {renderDiscover()}
+        </div>
+        
+        <div className="footer__column section-3">
         {renderAddress()}
+        {renderCallUs()}
+        {renderFollowUs()}
+        </div>
+        <div className="footer__column section-4">
         {renderMap()}
+        </div>
       </div>
-      {renderCallUs()}
-      {renderLogo()}
+      {/* <div className="address_wrapper">
+        {renderAddress()}
+        {renderCallUs()}
+        {renderMap()}
+      </div> */}
+      
       {renderCopyRight()}
     </>
   );

@@ -496,9 +496,21 @@
     height: initial;
   }
 
+  .testimonials {
+    padding-top: 3rem;
+  }
+
+  .testimonials__title {
+    margin-bottom: 3rem;
+  }
+
   .testimonials__videos-wrapper {
     grid-template-columns: unset;
     place-items: center;
+  }
+
+  .our-story {
+    margin-top: 4rem;
   }
 
   .our-story__title {
