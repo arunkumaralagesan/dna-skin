@@ -111,12 +111,18 @@ class Header extends Component {
   }
 
   renderMenuIcon() {
+    const { isMenuOpen } = this.state;
+    const source = `/images/common/${isMenuOpen ? 'close': 'menu'}.png`
     return (
-      <div onClick={() => this.setState(prevState => ({ isMenuOpen : !prevState.isMenuOpen }))}>
+      <div
+        onClick={() =>
+          this.setState((prevState) => ({ isMenuOpen: !prevState.isMenuOpen }))
+        }
+      >
         <img
           className="header__menu-icon"
           alt="Menu"
-          src="/images/common/menu.png"
+          src={source}
         />
       </div>
     );
@@ -125,8 +131,27 @@ class Header extends Component {
   renderMobileMenuDrawer() {
     const { isMenuOpen } = this.state;
     return (
-      <div className={cx("menu-drawer-container", { 'open': isMenuOpen })} onClick={event => { event.stopPropagation() }}>
-      {_map(SITE_MAP, (page) => this.renderMobileSiteTitle(page))}
+      <div
+        className={cx("menu-drawer-container", { open: isMenuOpen })}
+        onClick={(event) => {
+          event.stopPropagation();
+        }}
+      >
+        {/* <div
+          className={cx("menu-drawer-close-wrapper")}
+          onClick={() =>
+            this.setState((prevState) => ({
+              isMenuOpen: !prevState.isMenuOpen,
+            }))
+          }
+        >
+          <img
+            className="drawer-close"
+            alt="DNA Skin"
+            src="/images/common/close.png"
+          />
+        </div> */}
+        {_map(SITE_MAP, (page) => this.renderMobileSiteTitle(page))}
       </div>
     );
   }
@@ -134,7 +159,12 @@ class Header extends Component {
   renderBackDrop() {
     const { isMenuOpen } = this.state;
     return (
-      <div className={cx("menu-drawer-backdrop", { 'open': isMenuOpen })} onClick={() => this.setState(prevState => ({ isMenuOpen : !prevState.isMenuOpen }))}></div>
+      <div
+        className={cx("menu-drawer-backdrop", { open: isMenuOpen })}
+        onClick={() =>
+          this.setState((prevState) => ({ isMenuOpen: !prevState.isMenuOpen }))
+        }
+      ></div>
     );
   }
 
