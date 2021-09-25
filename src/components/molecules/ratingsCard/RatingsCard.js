@@ -5,12 +5,13 @@ import 'antd/dist/antd.css';
 import "./ratingsCard.css";
 
 function RatingsCard({ url, aggregate, total}) {
+  console.log({ url });
   return (
     <div className="ratings-card__container">
       <img
         className="ratings-card__logo"
         alt="Rating Logo"
-        src="/images/common/logo-big.png"
+        src={url}
       />
       <div className="ratings__info">
         <span className="ratings__aggregate">{aggregate}</span>

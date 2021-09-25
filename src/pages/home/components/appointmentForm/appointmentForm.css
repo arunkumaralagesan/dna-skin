@@ -65,8 +65,12 @@
   border: solid 1px #adc9d3;
   background-color: #fff;
   width: 100%;
-  margin: 4rem 0rem;
-  padding: 1rem;
+  margin: 6rem 0rem;
+  padding: 3rem 1rem;
+}
+
+::placeholder {
+  color: #BFBFBF;
 }
 
 .button {
@@ -92,9 +96,15 @@
 }
 
 .send-request {
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.26px;
   color: white;
-  margin-top: 1rem;
   border: none;
+  margin-top: 2rem;
 }
 
 .form__title {

@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import _get from "lodash/get";
 import { DatePicker, Select } from "antd";
+import { message, Button, Space } from 'antd';
 
-import { isMobileDevice } from "../../../../helpers/utils";
+import axios from "axios";
+
+import { PHONES } from "../../../../constants/general";
 import "./appointmentForm.css";
-import { isValidEmail, validateFormHelper } from './appointmentForm.helpers';
+import { validateFormHelper } from "./appointmentForm.helpers";
 
 const { Option } = Select;
 
@@ -12,7 +15,10 @@ export class AppointmentForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      formValues: {},
+      formValues: {
+        date: "",
+        myKey: Math.random() * 100,
+      },
       displayError: false,
       formErrors: {},
     };
@@ -37,9 +43,12 @@ export class AppointmentForm extends Component {
           required={required}
           value={formValues[key]}
           onChange={(evt) =>
-            this.setState({
-              formValues: { ...formValues, [key]: evt.target.value },
-            }, () => this.validateForm())
+            this.setState(
+              {
+                formValues: { ...formValues, [key]: evt.target.value },
+              },
+              () => this.validateForm()
+            )
           }
         />
         {this.renderError(key)}
@@ -60,14 +69,17 @@ export class AppointmentForm extends Component {
           value={formValues.phone_number}
           onChange={(evt) => {
             const phone = evt.target.value;
-            this.setState({
-              formValues: {
-                ...formValues,
-                phone_number: isNaN(phone)
-                  ? formValues.phone_number || ""
-                  : evt.target.value,
+            this.setState(
+              {
+                formValues: {
+                  ...formValues,
+                  phone_number: isNaN(phone)
+                    ? formValues.phone_number || ""
+                    : evt.target.value,
+                },
               },
-            }, () => this.validateForm());
+              () => this.validateForm()
+            );
           }}
         />
         {this.renderError("phone_number")}
@@ -80,18 +92,22 @@ export class AppointmentForm extends Component {
   }
 
   renderSelectAndDate() {
-    const { formValues } = this.state;
+    const { formValues, myKey } = this.state;
     return (
       <div className="form__row">
         {this.renderInputFiled("Email address", "email")}
         <div className="input-field-wrapper">
           <div className="form__date-and-select">
             <DatePicker
+              key={myKey}
               disabledDate={this.disabledDate}
               onChange={(evt, dateString) =>
-                this.setState({
-                  formValues: { ...formValues, date: dateString },
-                }, () => this.validateForm())
+                this.setState(
+                  {
+                    formValues: { ...formValues, date: dateString },
+                  },
+                  () => this.validateForm()
+                )
               }
               className="form__date-picker"
               format="DD/MM/YYYY"
@@ -101,11 +117,15 @@ export class AppointmentForm extends Component {
               bordered={false}
               placeholder="Treatment"
               dropdownClassName="form__appointment-select"
+              value={formValues?.appointment}
               style={{ width: 150 }}
-              onChange={val =>
-                this.setState({
-                  formValues: { ...formValues, appointment: val },
-                }, () => this.validateForm())
+              onChange={(val) =>
+                this.setState(
+                  {
+                    formValues: { ...formValues, appointment: val },
+                  },
+                  () => this.validateForm()
+                )
               }
             >
               <Option value="Skin">Skin</Option>
@@ -120,7 +140,7 @@ export class AppointmentForm extends Component {
   }
 
   validateForm = () => {
-    const { formValues, displayError } = this.state;  
+    const { formValues, displayError } = this.state;
     const formErrors = validateFormHelper({ formValues, displayError });
     this.setState({ formErrors });
   };
@@ -128,37 +148,78 @@ export class AppointmentForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     event.stopPropagation();
-    this.setState({ displayError: true }, () => this.validateForm());
-    
-    const { formValues, formErrors } = this.state;
-    if (Object.values(formErrors).some((value) => value)) {
+    this.setState({ displayError: true });
+    const { formValues } = this.state;
 
-    } else {
+    const formErrors = validateFormHelper({ formValues, displayError: true });
+
+    if (Object.values(formErrors).some((value) => value)) {
+      this.setState({ formErrors });
+      return;
+    } else if (Object.values(formValues).every((value) => value)) {
       const name = _get(formValues, "person_name");
       const phone = _get(formValues, "phone_number");
       const date = _get(formValues, "date");
       const appointment = _get(formValues, "appointment");
       const query = _get(formValues, "query");
-
-      // handle Submit
+      const email = _get(formValues, "email");
+      this.setState({ formLoading: true });
+      axios
+        .post(
+          `https://sheet.best/api/sheets/ffa4e7fc-422a-492a-bb3c-7b681a24ceba`,
+          {
+            name,
+            phone,
+            date,
+            email,
+            treatment: appointment,
+            query,
+          }
+        )
+        .then(() => {
+          // toaster success
+          message.success({
+            content: 'Registeration success',
+            className: 'custom-class',
+            style: {
+              marginTop: '10vh',
+            },
+          });
+          this.setState({
+            formValues: {
+              person_name: "",
+              phone_number: "",
+              email: "",
+              date: "",
+              appointment: "",
+              query: "",
+              formErrors: {},
+              displayError: false,
+            },
+            formLoading: false,
+            myKey: Math.random() * 100,
+            displayError: false,
+          });
+        })
+        .catch(() => {
+          this.setState({ formLoading: false });
+        });
     }
   };
 
   render() {
-    const isMobile = isMobileDevice();
-    const { formValues, formErrors } = this.state;
-    console.log({ formErrors });
-    // if (isMobile) return null;
+    const { formValues, formLoading } = this.state;
     return (
       <div className="form-container">
         <div class="form__title">Request an Appointment</div>
         <div class="form__contact">
-          Call Us:- +91 73380 10101, +91 73384 44555
+          Call Us:- <span>{`+91 ` + PHONES.ONE}</span>,
+          <span> {`+91 ` + PHONES.TWO} </span>
         </div>
         <form
           id="ContactusForm"
           name="contact-form1"
-          onSubmit={this.handleSubmit}
+          // onSubmit={this.handleSubmit}
           className="appointment-form"
         >
           <div className="form__row">
@@ -173,20 +234,25 @@ export class AppointmentForm extends Component {
             cols="20"
             placeholder="Query/Message"
             rows="3"
+            value={formValues?.query}
             onChange={(evt) =>
               this.setState({
                 formValues: { ...formValues, query: evt.target.value },
               })
             }
           ></textarea>
-          <button
+          <Button
             className="primary-button send-request"
             type="submit"
             value="Submit"
+            type="primary"
+            onClick={this.handleSubmit}
+            loading={formLoading}
           >
-            <strong>Send Request</strong>
-          </button>
+            Send Request
+          </Button>
         </form>
+        <Space></Space>
       </div>
     );
   }

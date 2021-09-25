@@ -60,13 +60,13 @@ export const TESTIMONIAL_VIDEOS = [
 
 export const RATING_DETAILS = [
   {
-    url: 'google',
+    url: "/images/common/google.jpg",
     aggregate: 4.5,
     total: 234,
   },
   {
-    url: 'Practo',
-    aggregate: 4.3,
+    url: "/images/common/practo.jpg",
+    aggregate: 4.8,
     total: 234,
   }
 ];

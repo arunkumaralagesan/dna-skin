@@ -24,9 +24,9 @@ class Home extends Component {
     return (
       <section className="main-banner wrapper">
         <div className="main-banner__left">
-          <p className="main-banner--dark">{MAIN_TITLE_1}</p>
-          <p className="main-banner--green">{MAIN_TITLE_2}</p>
-          <p className="main-banner--content">{MAIN_CONTENT_1}</p>
+          <div className="main-banner--dark">{MAIN_TITLE_1}</div>
+          <div className="main-banner--green">{MAIN_TITLE_2}</div>
+          <div className="main-banner--content">{MAIN_CONTENT_1}</div>
           <PrimaryButton
             text="Learn More"
             className="main-banner--learn-more"
@@ -48,9 +48,9 @@ class Home extends Component {
     return (
       <section className="main-banner wrapper">
         <div className="main-banner__left">
-          <p className="main-banner--dark">{MAIN_TITLE_1}</p>
-          <p className="main-banner--green">{MAIN_TITLE_2}</p>
-          <p className="main-banner--content">{MAIN_CONTENT_1}</p>
+          <div className="main-banner--dark">{MAIN_TITLE_1}</div>
+          <div className="main-banner--green">{MAIN_TITLE_2}</div>
+          <div className="main-banner--content">{MAIN_CONTENT_1}</div>
           <PrimaryButton
             text="Learn More"
             className="main-banner--learn-more"
@@ -148,7 +148,7 @@ class Home extends Component {
               lasers technologies. She has a keen eye for aesthetics and
               believes in a holistic approach to healthy skin, body, and mind.
             </p>
-            <p className="founder__follow">Follow Dr. Priyanka:</p>
+            <div className="founder__follow">Follow Dr. Priyanka:</div>
             <a
               target="_blank"
               href="https://www.instagram.com/drpriyankareddy/"
@@ -171,9 +171,19 @@ class Home extends Component {
   renderStoryVideo() {
     return (
       <div className="our-story__video-player-wrapper">
+         <img
+          className="our-story__top"
+          alt="DNA Skin"
+          src="/images/common/circle-gray.png"
+        />
         <VideoWithCenterPlay
           url='https://www.youtube.com/watch?v=eAQIqSUcZK8'
           thumbnail='https://img.youtube.com/vi/eAQIqSUcZK8/maxresdefault.jpg'
+        />
+         <img
+          className="our-story__bottom"
+          alt="DNA Skin"
+          src="/images/common/circle-gray.png"
         />
       </div>
     );

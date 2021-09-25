@@ -8,7 +8,7 @@
 }
 
 .ratings-card__logo {
-  width: 130px;
+  height: 35px;
 }
 
 .ratings__info {
@@ -31,9 +31,10 @@
 }
 
 .ratings__total-count {
-  font-size: 20px;
+  font-size: 18px;
   color: var(--content-color);
   line-height: normal;
+  font-weight: 300;
 }
 
 @media screen and (max-width: 768px) {
