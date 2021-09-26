@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import _get from "lodash/get";
 import { DatePicker, Select } from "antd";
 import { message, Button, Space } from 'antd';
-
 import axios from "axios";
+
+import { isMobileDevice } from "../../../../helpers/utils";
 
 import { PHONES } from "../../../../constants/general";
 import "./appointmentForm.css";
@@ -209,17 +210,17 @@ export class AppointmentForm extends Component {
 
   render() {
     const { formValues, formLoading } = this.state;
+    const isMobile = isMobileDevice();
     return (
       <div className="form-container">
         <div class="form__title">Request an Appointment</div>
         <div class="form__contact">
-          Call Us:- <span>{`+91 ` + PHONES.ONE}</span>,
-          <span> {`+91 ` + PHONES.TWO} </span>
+          Call Us:- <span>{`+91 ` + PHONES.ONE}</span>
+          {!isMobile && <span> {`, +91 ` + PHONES.TWO} </span>}
         </div>
         <form
           id="ContactusForm"
           name="contact-form1"
-          // onSubmit={this.handleSubmit}
           className="appointment-form"
         >
           <div className="form__row">

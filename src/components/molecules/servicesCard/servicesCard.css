@@ -11,10 +11,9 @@
 }
 
 .services-card__image {
-  margin-bottom: 30px;
-  margin-top: 20px;
-  width: 320px;
-  border-radius: 20px;
+  border-radius: 2rem;
+  width: 100%;
+  padding: 1.5rem;
 }
 
 .services-card__title {
@@ -26,10 +25,11 @@
 
 @media screen and (max-width: 768px)  {
   .services-card__wrapper {
-    width: 320px;
+    width: 100%;
   }
 
   .services-card__image {
-    width: 280px;
+    /* width: 280px; */
+    padding: 1rem;
   }
 }
