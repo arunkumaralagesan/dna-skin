@@ -15,7 +15,7 @@ function RatingsCard({ url, aggregate, total}) {
       />
       <div className="ratings__info">
         <span className="ratings__aggregate">{aggregate}</span>
-        <Rate allowHalf disabled defaultValue={2.5} className="ratings__star-container" />
+        <Rate allowHalf disabled defaultValue={aggregate} className="ratings__star-container" />
         <span className="ratings__total-count">{total + ' Reviews'}</span>
       </div>
     </div>
