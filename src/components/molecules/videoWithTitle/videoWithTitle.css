@@ -33,11 +33,11 @@
 .with-title__video-player > div, .without-title__video-player > div {
   width: 100% !important;
   height: 100% !important;
-  border-radius: 20px !important;
+  border-radius: 10px !important;
 }
 
 .with-title__video-player iframe, .without-title__video-player iframe {
-  border-radius: 20px !important;
+  border-radius: 10px !important;
 }
 
 .video__info {

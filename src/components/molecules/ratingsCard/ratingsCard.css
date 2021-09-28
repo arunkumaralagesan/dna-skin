@@ -41,6 +41,7 @@
   .ratings-card__container {
     min-width: unset;
     width: 100%;
+    padding: 1rem 1rem 0.5rem 1rem;
   }
   .ratings__aggregate {
     font-size: 26px;
@@ -50,11 +51,14 @@
     padding: 0 1rem;
   }
   .ratings__total-count {
-    font-size: 16px;
-    display: block;
+    font-size: 12px;
+    /* display: block; */
     padding: 1rem 0rem;
   }
   .ratings__info {
     display: block;
+  }
+  .ratings-card__logo {
+    height: 20px;
   }
 }

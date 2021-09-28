@@ -119,16 +119,16 @@
 
 .services__half-top {
   position: absolute;
-  bottom: -115px;
-  left: -20px;
-  width: 230px;
+  bottom: -10rem;
+  left: -3rem;
+  width: 20rem;
 }
 
 .services__half-bottom {
   position: absolute;
-  top: -90px;
-  right: -60px;
-  width: 230px;
+  top: -10rem;
+  right: -3rem;
+  width: 20rem;
 }
 
 .founder {
@@ -257,7 +257,7 @@
   color: var(--content-color);
   font-size: 22px;
   font-weight: 300;
-  width: 80%;
+  width: 90%;
   align-self: center;
   font-stretch: normal;
   font-style: normal;
@@ -273,7 +273,7 @@
 .our-story__video-player-wrapper {
   /* border: solid 16px #d4eee7; */
   background-color: #d4eee7;
-  width: 80%;
+  width: 90%;
   height: 500px;
   align-self: center;
   border-radius: 20px;
@@ -281,8 +281,6 @@
   position: relative;
   z-index: 2;
 }
-
- /* z index on border is not working */
 
 .our-story__video-player-wrapper::before {
   border: solid 16px #d4eee7;
@@ -295,18 +293,18 @@
 
 .our-story__top {
   position: absolute;
-  height: 300px;
-  top: -150px;
-  left: -150px;
+  height: 22rem;
+  top: -11rem;
+  left: -11rem;
   z-index: -1;
 }
 
 .our-story__bottom {
   position: absolute;
-  height: 200px;
-  bottom: -100px;
-  right: -100px;
-  z-index: -1;
+    height: 15rem;
+    bottom: -8rem;
+    right: -8rem;
+    z-index: -1;
 }
 
 .our-story__video-player-wrapper > div {
@@ -463,7 +461,7 @@
   /*--------------------- AWARDS -------------------------------*/
 
   .awards {
-    padding: 4rem 2rem 2rem 2rem;
+    padding: 4rem 2rem 1rem 2rem;
   }
 
   .awards__title {
@@ -504,7 +502,7 @@
   }
 
   .services__view-all {
-    margin: 4rem 0rem 4rem 0rem;
+    margin: 2rem 0rem;
     margin-left: auto;
     margin-right: auto;
   }
@@ -524,10 +522,16 @@
   }
 
   .our-story__video-player-wrapper {
-    /* width: 100%; */
+    width: 90%;
     height: initial;
     margin-bottom: 4rem;
   }
+
+  .our-story__video-player-wrapper::before {
+    inset: -10px;
+    border-radius: 20px;
+  }
+  
 
   .our-story__top {
    display: none;
@@ -543,12 +547,20 @@
   }
 
   .testimonials__title {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 
   .testimonials__videos-wrapper {
     grid-template-columns: unset;
     place-items: center;
+    grid-row-gap: 10px;
+    row-gap: 10px;
+  }
+
+  .our-story__know-more {
+    margin: 1rem 0rem 4rem 0rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .our-story {

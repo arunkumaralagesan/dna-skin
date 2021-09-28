@@ -132,6 +132,8 @@
 @media screen and (max-width: 768px) {
   .form-container {
     width: 100%;
+    margin: 3rem 0rem;
+    padding: 2rem 0rem;
   }
   .form__title {
     font-size: 30px;
