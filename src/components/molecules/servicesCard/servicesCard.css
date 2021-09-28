@@ -13,6 +13,7 @@
 .services-card__image {
   border-radius: 2rem;
   width: 100%;
+  min-height: 360px;
   padding: 1.5rem;
 }
 
@@ -29,7 +30,7 @@
   }
 
   .services-card__image {
-    /* width: 280px; */
     padding: 1rem;
+    min-height: unset;
   }
 }
