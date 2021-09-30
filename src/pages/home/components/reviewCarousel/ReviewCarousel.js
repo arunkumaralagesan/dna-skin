@@ -30,7 +30,7 @@ function ReviewCarousel() {
   };
 
   const isMobile = isMobileDevice();
-  const getOffset = () => isMobile ? 332 : ref.current?.getBoundingClientRect()?.width * 0.9;
+  const getOffset = () => isMobile ? 270 : ref.current?.getBoundingClientRect()?.width * 0.9;
   return (
     <div className="review__carousel">
       <div className="review__cards" ref={ref} onScroll={handleScroll}>

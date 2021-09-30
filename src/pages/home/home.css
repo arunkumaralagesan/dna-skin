@@ -89,6 +89,7 @@
   background-color: var(--background-grey);
   padding-bottom: 1rem;
   position: relative;
+  overflow: hidden;
 }
 
 .services__title {
@@ -164,6 +165,14 @@
   width: 70%;
   padding: 10rem 0;
   background-color: #f8fafb;
+  position: relative;
+}
+
+.founder__s-shape {
+  width: 50%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
 }
 
 .founder__title {
@@ -182,7 +191,7 @@
 }
 
 .founder__info {
-  font-size: 11px;
+  font-size: 22px;
   font-weight: normal;
   text-align: left;
   line-height: 1.64;
@@ -262,7 +271,7 @@
   align-self: center;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.45;
+  line-height: 1.33;
 }
 
 .our-story__know-more {
@@ -388,7 +397,6 @@
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  
   .our-story__title,
   .ratings__title,
   .testimonials__title,
@@ -467,7 +475,7 @@
   }
 
   .awards {
-    padding: 4rem 2rem 1rem 2rem;
+    padding: 4rem 2rem 0rem 2rem;
   }
 
   .awards__content {
@@ -485,7 +493,7 @@
   }
 
   .services__title {
-    padding: 3rem 0;
+    padding: 2rem 0;
   }
 
   .services__cards {
@@ -521,20 +529,25 @@
     height: 15px;
   }
 
-  .founder__follow, .founder__insta {
+  .founder__follow,
+  .founder__insta {
     font-size: 12px;
     line-height: 1.5;
   }
 
   .our-story__video-player-wrapper {
-    width: 90%;
+    width: 95%;
     height: initial;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   .our-story__video-player-wrapper::before {
     inset: -10px;
     border-radius: 20px;
+  }
+
+  .our-story__title {
+    margin-bottom: 1rem;
   }
 
   .our-story__top {
@@ -546,7 +559,7 @@
   }
 
   .testimonials {
-    padding-top: 3rem;
+    padding-top: 2rem;
   }
 
   .testimonials__title {
@@ -561,17 +574,26 @@
   }
 
   .our-story__know-more {
-    margin: 1rem 0rem 4rem 0rem;
+    margin: 1rem 0rem 3rem 0rem;
     margin-left: auto;
     margin-right: auto;
   }
 
+  .testimonials__more-video {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
   .our-story {
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
 
   .our-story__content {
     font-size: 12px;
+  }
+
+  .review__cards {
+    padding-left: 1rem;
   }
 
   .ratings__title {
@@ -580,5 +602,43 @@
 
   .ratings {
     padding-top: 2rem;
+  }
+
+  .rating__cards {
+    margin-bottom: 0rem;
+  }
+
+  .founder__wrapper-left {
+    width: 75%;
+  }
+
+  .founder__wrapper-right {
+    width: 25%;
+  }
+
+  .founder__left {
+    width: 60%;
+    padding: 3rem 0rem;
+  }
+
+  .founder__image {
+    width: 130px;
+    height: 240px;
+    left: -50%;
+  }
+
+  .founder__insta-wrapper {
+    padding-top: 0.5rem;
+  }
+
+  .founder__info {
+    font-size: 11px;
+  }
+
+  .founder__s-shape {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    right: -50%;
   }
 }

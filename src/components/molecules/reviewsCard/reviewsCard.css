@@ -13,6 +13,7 @@
   color: var(--content-color);
   font-size: 20px;
   font-weight: 300;
+  line-height: 1.4;
 }
 
 .reviews-card__info {
@@ -44,10 +45,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .reviews-card__container{
-    width: 85% !important;
+  .reviews-card__container {
+    width: 240px !important;
     max-width: 300px !important;
+    padding: 20px;
+    margin: 0.5rem;
   }
+
   .reviews-card__ratings-name {
     font-size: 14px;
     font-weight: 500;
@@ -55,7 +59,8 @@
   }
 
   .reviews-catd__content {
-  font-size: 12px;
+    font-size: 12px;
+    margin-bottom: 1.5rem;
   }
 
   .reviews-card__profile {

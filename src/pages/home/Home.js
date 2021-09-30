@@ -155,12 +155,17 @@ class Home extends Component {
               className="founder__insta-wrapper"
             >
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png"
+                src="/images/common/instagram-colored.png"
                 alt="insta"
                 className="founder__insta-logo"
               />
               <div className="founder__insta">drpriyankareddy</div>
             </a>
+            <img
+                src="/images/landing/s-shape.png"
+                alt="insta"
+                className="founder__s-shape"
+              />
           </div>
           <div className="founder__right"></div>
         </div>

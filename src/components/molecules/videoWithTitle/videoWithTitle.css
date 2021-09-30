@@ -54,11 +54,7 @@
     rgba(3, 0, 40, 0.27914915966386555) 0%,
     rgba(237, 246, 254, 0) 100%
   );
-  border-radius: 20px;
-
-  /* background: #edf6fe;
-  background-image: linear-gradient(to top, #030028), linear-gradient(to bottom, #edf6fe, #edf6fe); */
-
+  border-radius: 10px;
 }
 
 .video__title {
@@ -85,7 +81,7 @@
 
 @media screen and (max-width: 768px) {
   .with-title__video-player {
-    margin: 1rem 0rem;
+    margin: 0.5rem 0rem;
     width: 90%;
     height: initial;
     position: relative;

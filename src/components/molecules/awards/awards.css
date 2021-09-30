@@ -52,9 +52,9 @@
 
   .award-image__stamp {
     position: absolute;
-    width: 80px;
-    top: -40px;
-    left: -40px;
+    width: 60px;
+    top: -30px;
+    left: -30px;
   }
 
   .award-container__title {

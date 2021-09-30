@@ -16,7 +16,7 @@ function ReviewsCard({ content, aggregate, name, url }) {
         <div class="reviews-card__profile-info">
           <div class="reviews-card__ratings-name">{name}</div>
           <div class="reviews-card__ratings-star">
-          <Rate allowHalf disabled defaultValue={2.5} className="reviews-card__ratings-star" />
+          <Rate allowHalf disabled defaultValue={5} className="reviews-card__ratings-star" />
           </div>
         </div>
       </div>

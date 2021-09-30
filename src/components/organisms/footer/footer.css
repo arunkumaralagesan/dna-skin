@@ -160,6 +160,7 @@
 
   .footer__logo {
     margin: 1rem 0rem;
+    width: 100px;
   }
 
   .footer__phone-wrapper {
@@ -172,6 +173,13 @@
   }
 
   .footer-row {
-    margin-top: 2rem;
+    margin-top: 1rem;
+  }
+
+  .section-left {
+    width: 50%;
+  }
+  .section-right {
+    width: 50%;
   }
 }

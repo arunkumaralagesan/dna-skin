@@ -124,8 +124,8 @@ function Footer() {
   const renderMobileFooter = () => (
     <>
       <div className="footer__links">
-        {renderClinic()}
-        {renderDiscover()}
+        <div className="section-left">{renderClinic()}</div>
+        <div className="section-right">{renderDiscover()}</div>
       </div>
       <div className="address_wrapper">
         {renderAddress()}
@@ -135,9 +135,7 @@ function Footer() {
         {renderCallUs()}
         {renderFollowUs()}
       </div>
-      <div className="pull-left">
-      {renderLogo()}
-      </div>
+      <div className="pull-left">{renderLogo()}</div>
       {renderCopyRight()}
     </>
   );
@@ -149,25 +147,15 @@ function Footer() {
           {renderClinic()}
           {renderLogo()}
         </div>
-        <div className="footer__column section-2">
-          {renderDiscover()}
-        </div>
-        
+        <div className="footer__column section-2">{renderDiscover()}</div>
+
         <div className="footer__column section-3">
-        {renderAddress()}
-        {renderCallUs()}
-        {renderFollowUs()}
+          {renderAddress()}
+          {renderCallUs()}
+          {renderFollowUs()}
         </div>
-        <div className="footer__column section-4">
-        {renderMap()}
-        </div>
+        <div className="footer__column section-4">{renderMap()}</div>
       </div>
-      {/* <div className="address_wrapper">
-        {renderAddress()}
-        {renderCallUs()}
-        {renderMap()}
-      </div> */}
-      
       {renderCopyRight()}
     </>
   );

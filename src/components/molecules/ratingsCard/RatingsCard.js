@@ -5,7 +5,6 @@ import 'antd/dist/antd.css';
 import "./ratingsCard.css";
 
 function RatingsCard({ url, aggregate, total}) {
-  console.log({ url });
   return (
     <div className="ratings-card__container">
       <img
