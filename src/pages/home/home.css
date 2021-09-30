@@ -171,6 +171,7 @@
   font-size: 36px;
   font-weight: 600;
   line-height: 1.33;
+  text-transform: uppercase;
 }
 
 .founder__name {
@@ -181,7 +182,7 @@
 }
 
 .founder__info {
-  font-size: 22px;
+  font-size: 11px;
   font-weight: normal;
   text-align: left;
   line-height: 1.64;
@@ -411,23 +412,23 @@
   }
 
   .main-banner--dark {
-    font-size: 40px;
+    font-size: 28px;
     font-weight: 600;
     font-stretch: normal;
     text-align: center;
   }
 
   .main-banner--green {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 600;
     text-align: center;
   }
 
   .main-banner--content {
-    font-size: 20px;
+    font-size: 12px;
     font-weight: 300;
     text-align: center;
-    margin: 1rem 0 2rem 0;
+    margin: 1rem 3rem;
   }
 
   .main-banner--learn-more {
@@ -450,10 +451,9 @@
 
   .main-banner__image {
     object-fit: contain;
-    width: 90%;
+    width: 85%;
     margin-top: 2rem;
-     /* width: 100%; */
-  height: unset;
+    height: unset;
   }
 
   /*--------------------- MAIN BANNER END------------------------*/
@@ -465,12 +465,12 @@
   }
 
   .awards__title {
-    font-size: 30px;
+    font-size: 18px;
     font-weight: 600;
   }
 
   .awards__content {
-    font-size: 24px;
+    font-size: 12px;
     font-weight: normal;
     margin-top: 0.5rem;
   }
@@ -489,13 +489,13 @@
 
   .services__title {
     color: var(--secondary-color);
-    font-size: 30px;
+    font-size: 18px;
     padding: 3rem 0;
   }
 
   .services__cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     column-gap: 12px;
     row-gap: 40px;
     place-items: center;
@@ -521,6 +521,14 @@
     width: 130px;
   }
 
+  .founder__title {
+    font-size: 18px;
+  }
+
+  .founder__name {
+    font-size: 18px;
+  }
+  
   .our-story__video-player-wrapper {
     width: 90%;
     height: initial;
@@ -547,7 +555,8 @@
   }
 
   .testimonials__title {
-    margin-bottom: 2rem;
+    font-size: 18px;
+    margin-bottom: 1rem;
   }
 
   .testimonials__videos-wrapper {
@@ -568,10 +577,14 @@
   }
 
   .our-story__title {
-    font-size: 30px;
+    font-size: 18px;
   }
 
   .our-story__content {
-    font-size: 20px;
+    font-size: 12px;
+  }
+  
+  .ratings__title {
+    font-size: 18px;
   }
 }

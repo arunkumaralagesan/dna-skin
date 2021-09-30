@@ -30,7 +30,15 @@
   }
 
   .services-card__image {
-    padding: 1rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
     min-height: unset;
+  }
+
+  .services-card__title {
+    color: var(--secondary-color);
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
   }
 }
