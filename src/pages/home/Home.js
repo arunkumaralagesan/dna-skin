@@ -71,7 +71,7 @@ class Home extends Component {
   renderAwards() {
     return (
       <section className="awards wrapper">
-        <div className="awards__title">Awards And Recognitions</div>
+        <div className="awards__title section-title">Awards And Recognitions</div>
         <p className="awards__content">
           When Clients Come First, Awards Follow
         </p>
@@ -95,7 +95,7 @@ class Home extends Component {
     return (
       <section className="services-container">
         <div className="services wrapper">
-          <div className="services__title">Services We Offer</div>
+          <div className="services__title section-title">Services We Offer</div>
           <div className="services__cards">
             {_map(SERVICES, (service) => (
               <ServicesCard {...service} />
@@ -135,7 +135,7 @@ class Home extends Component {
         </div>
         <div className="wrapper founder__container">
           <div className="founder__left">
-            <div className="founder__title">About Our Founder</div>
+            <div className="founder__title section-title">About Our Founder</div>
             <p className="founder__name">DR. PRIYANKA REDDY</p>
             <p className="founder__info">
               Dr. Priyanka Reddy (M.B.B.S, M.D;D.V.L, Fellowship in Cosmetology
@@ -192,7 +192,7 @@ class Home extends Component {
   renderOurStory() {
     return (
       <section className="our-story wrapper">
-        <div className="our-story__title">Our Story</div>
+        <div className="our-story__title section-title">Our Story</div>
         <p className="our-story__content">
           At DNA, honesty, ethical practice, patient’s services and mutual
           respect are the main pillars that drive us. We put our patients first
@@ -209,7 +209,7 @@ class Home extends Component {
       <section className="testimonials-container">
         <div className="wrapper">
           <div className="testimonials">
-            <div className="testimonials__title">Testimonials</div>
+            <div className="testimonials__title section-title">Testimonials</div>
             <div className="testimonials__videos-wrapper">
               {_map(TESTIMONIAL_VIDEOS, video => <VideoWithTitle {...video} />)}
             </div>
@@ -223,7 +223,7 @@ class Home extends Component {
   renderRatingsAndReviews() {
     return (
       <section className="ratings wrapper">
-        <p className="ratings__title">Ratings and Reviews</p>
+        <p className="ratings__title section-title">Ratings and Reviews</p>
         <div className="rating__cards">
           {_map(RATING_DETAILS, rating => <RatingsCard {...rating} />)}
         </div>

@@ -213,7 +213,7 @@ export class AppointmentForm extends Component {
     const isMobile = isMobileDevice();
     return (
       <div className="form-container">
-        <div class="form__title">Request an Appointment</div>
+        <div class="form__title section-title">Request an Appointment</div>
         <div class="form__contact">
           Call Us:- <span>{`+91 ` + PHONES.ONE}</span>
           {!isMobile && <span> {`, +91 ` + PHONES.TWO} </span>}

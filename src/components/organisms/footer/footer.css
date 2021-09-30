@@ -142,11 +142,11 @@
 
   .footer__title {
     margin-bottom: 0.5rem;
-    font-size: 20px;
+    font-size: 14px;
   }
 
   .footer__content, .footer_link, .footer__phone-number {
-    font-size: 16px;
+    font-size: 12px;
   }
   
   .section__wrapper {

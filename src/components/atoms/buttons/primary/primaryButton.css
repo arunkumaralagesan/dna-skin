@@ -21,7 +21,13 @@
 }
 
 @media screen and (max-width: 768px) {
+  .primary-button {
+    width: 130px;
+    height: 40px !important;
+    border-radius: 4px !important;
+  }
+
   .primary-button > span {
-    font-size: 16px;
+    font-size: 14px;
   }
 }

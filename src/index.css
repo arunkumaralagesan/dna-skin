@@ -26,6 +26,10 @@
   align-items: center;
 }
 
+.section-title {
+  font-size: 36px;
+}
+
 @media screen and (min-width: 1200px) {
   .wrapper {
     max-width: 1200px;
@@ -54,5 +58,9 @@
   .wrapper {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .section-title {
+    font-size: 12px;
   }
 }

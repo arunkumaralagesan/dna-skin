@@ -251,7 +251,7 @@
   font-size: 36px;
   font-weight: 600;
   margin-bottom: 2rem;
-  text-transform: uppercase
+  text-transform: uppercase;
 }
 
 .our-story__content {
@@ -287,7 +287,7 @@
   border: solid 16px #d4eee7;
   position: absolute;
   background-color: #d4eee7;
-  content: '';
+  content: "";
   inset: -20px;
   border-radius: 20px;
 }
@@ -302,10 +302,10 @@
 
 .our-story__bottom {
   position: absolute;
-    height: 15rem;
-    bottom: -8rem;
-    right: -8rem;
-    z-index: -1;
+  height: 15rem;
+  bottom: -8rem;
+  right: -8rem;
+  z-index: -1;
 }
 
 .our-story__video-player-wrapper > div {
@@ -388,7 +388,17 @@
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  /*--------------------- MAIN BANNER ------------------------*/
+  
+  .our-story__title,
+  .ratings__title,
+  .testimonials__title,
+  .founder__name,
+  .founder__title,
+  .services__title,
+  .awards__title {
+    font-size: 18px;
+  }
+
   .main-banner {
     display: flex;
     flex-direction: column;
@@ -456,17 +466,8 @@
     height: unset;
   }
 
-  /*--------------------- MAIN BANNER END------------------------*/
-
-  /*--------------------- AWARDS -------------------------------*/
-
   .awards {
     padding: 4rem 2rem 1rem 2rem;
-  }
-
-  .awards__title {
-    font-size: 18px;
-    font-weight: 600;
   }
 
   .awards__content {
@@ -483,13 +484,7 @@
     margin: 2rem 0rem;
   }
 
-  /*--------------------- AWARDS END------------------------*/
-
-  /*--------------------- SERVICES------------------------*/
-
   .services__title {
-    color: var(--secondary-color);
-    font-size: 18px;
     padding: 3rem 0;
   }
 
@@ -521,14 +516,16 @@
     width: 130px;
   }
 
-  .founder__title {
-    font-size: 18px;
+  .founder__insta-logo {
+    width: 15px;
+    height: 15px;
   }
 
-  .founder__name {
-    font-size: 18px;
+  .founder__follow, .founder__insta {
+    font-size: 12px;
+    line-height: 1.5;
   }
-  
+
   .our-story__video-player-wrapper {
     width: 90%;
     height: initial;
@@ -539,23 +536,20 @@
     inset: -10px;
     border-radius: 20px;
   }
-  
 
   .our-story__top {
-   display: none;
+    display: none;
   }
-  
+
   .our-story__bottom {
     display: none;
   }
 
-  
   .testimonials {
     padding-top: 3rem;
   }
 
   .testimonials__title {
-    font-size: 18px;
     margin-bottom: 1rem;
   }
 
@@ -576,15 +570,15 @@
     margin-top: 4rem;
   }
 
-  .our-story__title {
-    font-size: 18px;
-  }
-
   .our-story__content {
     font-size: 12px;
   }
-  
+
   .ratings__title {
-    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  .ratings {
+    padding-top: 2rem;
   }
 }
