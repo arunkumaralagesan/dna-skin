@@ -14,7 +14,7 @@ function VideoWithTitle({ title, url, thumbnail }) {
         className={cx("video__wrapper", { playing: play })}
         style={{ backgroundImage: `url(${thumbnail})`, objectFit: "contain" }}
       >
-        <div class="video__info gradient">
+        <div className="video__info gradient">
           <PlayButton size="s" onClick={() => setPlay(true)} />
           <div className="video__title">{title}</div>
         </div>
@@ -45,7 +45,7 @@ export function VideoWithCenterPlay({ url, thumbnail }) {
         className={cx("video__wrapper", "center-wrapper", { playing: play })}
         style={{ backgroundImage: `url(${thumbnail})`, objectFit: "contain" }}
       >
-        <div class="video__info">
+        <div className="video__info">
           <PlayButton size="m" onClick={() => setPlay(true)} />
         </div>
       </div>

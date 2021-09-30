@@ -11,8 +11,6 @@ import { PHONES } from "../../../constants/general";
 import "./header.css";
 import cx from "classnames";
 
-const KARNATAKA_NUMBER = "959-773-2847";
-
 class Header extends Component {
   state = {
     isMenuOpen: false,
@@ -137,20 +135,6 @@ class Header extends Component {
           event.stopPropagation();
         }}
       >
-        {/* <div
-          className={cx("menu-drawer-close-wrapper")}
-          onClick={() =>
-            this.setState((prevState) => ({
-              isMenuOpen: !prevState.isMenuOpen,
-            }))
-          }
-        >
-          <img
-            className="drawer-close"
-            alt="DNA Skin"
-            src="/images/common/close.png"
-          />
-        </div> */}
         {_map(SITE_MAP, (page) => this.renderMobileSiteTitle(page))}
       </div>
     );
@@ -176,7 +160,7 @@ class Header extends Component {
             {this.renderMenuIcon()}
             {this.renderLogo()}
           </div>
-          <div class="header__right">{this.renderMobilePhoneContainer()}</div>
+          <div className="header__right">{this.renderMobilePhoneContainer()}</div>
         </div>
         {this.renderMobileMenuDrawer()}
         {this.renderBackDrop()}

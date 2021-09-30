@@ -35,7 +35,7 @@ function ReviewCarousel() {
     <div className="review__carousel">
       <div className="review__cards" ref={ref} onScroll={handleScroll}>
         {_map(REVIEW_DETAILS, (review) => (
-          <ReviewsCard {...review} />
+          <ReviewsCard key={review?.url} {...review} />
         ))}
       </div>
       <div className="review__controls">
