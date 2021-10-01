@@ -1,6 +1,6 @@
 .main-banner {
   display: flex;
-  padding: 5rem 2rem;
+  padding: 6rem 2rem;
   position: relative;
 }
 
@@ -19,14 +19,15 @@
 
 .main-banner--dark {
   color: var(--secondary-color);
-  font-size: 50px;
+  font-size: 52px;
   font-weight: 600;
   text-align: left;
+  line-height: normal;
 }
 
 .main-banner--green {
   color: var(--primary-color);
-  font-size: 50px;
+  font-size: 52px;
   font-weight: bold;
 }
 
@@ -56,8 +57,8 @@
 
 .main-banner__image {
   object-fit: contain;
-  /* width: 100%; */
-  height: 520px;
+  width: 100%;
+  max-height: 520px;
 }
 
 .awards {
@@ -375,9 +376,6 @@
 }
 
 .rating__cards {
-  /* display: grid;
-  grid-template-columns: repeat(2, minmax(400px, 1fr));
-  column-gap: 84px; */
   margin-bottom: 2rem;
   display: flex;
   flex-wrap: wrap;
@@ -404,7 +402,7 @@
   .founder__title,
   .services__title,
   .awards__title {
-    font-size: 18px;
+    font-size: var(--title-font-size);
   }
 
   .main-banner {
@@ -443,7 +441,7 @@
   }
 
   .main-banner--content {
-    font-size: 12px;
+    font-size: var(--content-font-size);
     font-weight: 300;
     text-align: center;
     margin: 1rem 3rem;
@@ -479,7 +477,7 @@
   }
 
   .awards__content {
-    font-size: 12px;
+    font-size: var(--content-font-size);
     font-weight: normal;
     margin-top: 0.5rem;
   }
@@ -531,7 +529,7 @@
 
   .founder__follow,
   .founder__insta {
-    font-size: 12px;
+    font-size: var(--content-font-size);
     line-height: 1.5;
   }
 
@@ -589,7 +587,7 @@
   }
 
   .our-story__content {
-    font-size: 12px;
+    font-size: var(--content-font-size);;
   }
 
   .review__cards {
@@ -632,7 +630,7 @@
   }
 
   .founder__info {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .founder__s-shape {

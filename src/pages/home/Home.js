@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React, { Component } from "react";
-import ReactPlayer from 'react-player'
 import _map from "lodash/map";
 import Layout from "../../components/organisms/layout";
 

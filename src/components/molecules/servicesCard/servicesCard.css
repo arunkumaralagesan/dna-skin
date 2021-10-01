@@ -37,7 +37,7 @@
 
   .services-card__title {
     color: var(--secondary-color);
-    font-size: 12px;
+    font-size: var(--content-font-size);;
     font-weight: 600;
     margin-bottom: 14px;
     margin-top: 5px;

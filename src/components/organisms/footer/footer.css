@@ -146,7 +146,7 @@
   }
 
   .footer__content, .footer_link, .footer__phone-number {
-    font-size: 12px;
+    font-size: var(--content-font-size);;
   }
   
   .section__wrapper {

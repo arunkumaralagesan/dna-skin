@@ -18,6 +18,9 @@
 
   --separator-padding-top: 80px;
   --sub-content-padding-top: 40px;
+
+  --title-font-size: 36px;
+  --content-font-size: 24px;
 }
 
 .flex-all-center {
@@ -27,17 +30,7 @@
 }
 
 .section-title {
-  font-size: 36px;
-}
-
-@media screen and (min-width: 1200px) {
-  .wrapper {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+  font-size: var(--title-font-size);
 }
 
 @media screen and (min-width: 1400px) {
@@ -50,17 +43,26 @@
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .wrapper {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 @media screen and (max-width: 768px)  {
   :root {
     --header-height: 80px;
+
+    --title-font-size: 18px;
+    --content-font-size: 14px;
   }
 
   .wrapper {
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  .section-title {
-    font-size: 12px;
   }
 }

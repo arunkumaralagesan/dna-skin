@@ -55,7 +55,7 @@
   }
 
   .ratings__total-count {
-    font-size: 12px;
+    font-size: var(--content-font-size);;
     padding: 1rem 0rem;
   }
 

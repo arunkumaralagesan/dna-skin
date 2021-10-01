@@ -65,7 +65,7 @@
   border: solid 1px #adc9d3;
   background-color: #fff;
   width: 100%;
-  margin: 6rem 0rem;
+  margin: 6rem 2rem;
   padding: 3rem 1rem;
 }
 
@@ -141,7 +141,7 @@
   }
 
   .form__contact {
-    font-size: 12px;
+    font-size: var(--content-font-size);;
     padding-bottom: 0rem;
   }
 

@@ -19,6 +19,7 @@
 .reviews-card__info {
   display: flex;
   align-items: center;
+  margin-top: auto;
 }
 
 .reviews-card__profile {
@@ -59,7 +60,7 @@
   }
 
   .reviews-catd__content {
-    font-size: 12px;
+    font-size: var(--content-font-size);;
     margin-bottom: 1.5rem;
   }
 
