@@ -148,6 +148,7 @@ export class AppointmentForm extends Component {
   };
 
   handleSubmit = (event) => {
+    return false;
     event.preventDefault();
     event.stopPropagation();
     this.setState({ displayError: true });
