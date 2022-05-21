@@ -1,0 +1,14 @@
+.press__media-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-evenly;
+  padding-bottom: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .press__media-content {
+    align-items: center;
+    justify-content: center;
+  }
+}

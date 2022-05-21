@@ -37,7 +37,7 @@
 
 .footer__title {
   color: var(--primary-color);
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .footer_link {
@@ -45,6 +45,7 @@
   font-size: 18px;
   font-weight: 300;
   line-height: 1.8;
+  display: block;
 }
 
 .map__container {
@@ -145,12 +146,13 @@
     font-size: 14px;
   }
 
-  .footer__content, .footer_link, .footer__phone-number {
-    font-size: var(--content-font-size);;
+  .footer__content,
+  .footer_link,
+  .footer__phone-number {
+    font-size: var(--content-font-size);
   }
-  
-  .section__wrapper {
 
+  .section__wrapper {
   }
 
   .copy-right {

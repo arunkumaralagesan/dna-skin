@@ -4,7 +4,7 @@ import { REVIEW_DETAILS } from "../../constants";
 import ReviewsCard from "../../../../components/molecules/reviewsCard";
 import { isMobileDevice } from "../../../../helpers/utils";
 
-import './reviewCarousel.css';
+import "./reviewCarousel.css";
 
 function ReviewCarousel() {
   const ref = useRef(null);
@@ -20,7 +20,7 @@ function ReviewCarousel() {
     if (leftScrolled === 0) {
       setRight(true);
       setLeft(false);
-    }else if (leftScrolled < maxScrollLeft) {
+    } else if (leftScrolled < maxScrollLeft) {
       setRight(true);
       setLeft(true);
     } else {
@@ -30,7 +30,8 @@ function ReviewCarousel() {
   };
 
   const isMobile = isMobileDevice();
-  const getOffset = () => isMobile ? 270 : ref.current?.getBoundingClientRect()?.width * 0.9;
+  const getOffset = () =>
+    isMobile ? 270 : ref.current?.getBoundingClientRect()?.width * 0.9;
   return (
     <div className="review__carousel">
       <div className="review__cards" ref={ref} onScroll={handleScroll}>
@@ -42,20 +43,26 @@ function ReviewCarousel() {
         <img
           className="review__controls--left"
           alt="Rating Logo"
-          src={`/images/common/left-${isLeftEnabled ? 'selected' : 'gray'}.png`}
-          onClick={() => ref.current.scrollTo({
-            left: ref.current?.scrollLeft - getOffset(),
-            behavior: 'smooth'
-          })}
+          src={`/images/common/left-${isLeftEnabled ? "selected" : "gray"}.png`}
+          onClick={() =>
+            ref.current.scrollTo({
+              left: ref.current?.scrollLeft - getOffset(),
+              behavior: "smooth",
+            })
+          }
         />
         <img
           className="review__controls--right"
           alt="Rating Logo"
-          src={`/images/common/right-${isRightEnabled ? 'selected' : 'gray'}.png`}
-          onClick={() => ref.current?.scrollTo({
-            left: (ref.current?.scrollLeft || 0) + getOffset(),
-            behavior: 'smooth'
-          })}
+          src={`/images/common/right-${
+            isRightEnabled ? "selected" : "gray"
+          }.png`}
+          onClick={() =>
+            ref.current?.scrollTo({
+              left: (ref.current?.scrollLeft || 0) + getOffset(),
+              behavior: "smooth",
+            })
+          }
         />
       </div>
     </div>

@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import _map from "lodash/map";
 import { CLINIC, DISCOVER } from "./constants";
 import "./footer.css";
@@ -88,7 +90,9 @@ function Footer() {
       <div className="section__wrapper">
         <div className="footer__title">Clinic</div>
         {_map(CLINIC, (item) => (
-          <div className="footer_link">{item?.name}</div>
+          <Link to={item?.path} className="footer_link">
+            {item?.name}
+          </Link>
         ))}
       </div>
     );
@@ -99,7 +103,9 @@ function Footer() {
       <div>
         <div className="footer__title">Discover</div>
         {_map(DISCOVER, (item) => (
-          <div className="footer_link">{item?.name}</div>
+           <Link to={item?.path} className="footer_link">
+             {item?.name}
+           </Link>
         ))}
       </div>
     );
@@ -115,6 +121,7 @@ function Footer() {
         allowfullscreen=""
         aria-hidden="false"
         tabindex="0"
+        title="Map"
       />
     </div>
   );

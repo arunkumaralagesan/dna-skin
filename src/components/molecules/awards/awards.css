@@ -8,7 +8,7 @@
   align-items: center;
   position: relative;
   text-align: center;
-} 
+}
 
 .award-image__stamp {
   position: absolute;
@@ -27,13 +27,12 @@
 
 .award-container__content {
   color: var(--secondary-color);
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 300;
 
   margin: 0 3rem;
   font-weight: 300;
   margin-bottom: 2rem;
-  font-size: 22px;
   line-height: 1.45;
 }
 
@@ -44,12 +43,11 @@
   border-radius: 18px;
 }
 
-
-@media screen and (max-width: 768px)  {
+@media screen and (max-width: 768px) {
   .award-image__container-wrapper {
     width: 90%;
     margin: 1.5rem 0;
-  } 
+  }
 
   .award-image__stamp {
     position: absolute;
@@ -64,9 +62,9 @@
     font-weight: 600;
     margin: 0rem 1rem;
   }
-  
+
   .award-container__content {
-    font-size: var(--content-font-size);;
+    font-size: var(--content-font-size);
     font-weight: 300;
     margin: 1rem 0.5rem;
     line-height: 1.46;

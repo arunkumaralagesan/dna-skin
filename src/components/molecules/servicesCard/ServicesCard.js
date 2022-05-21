@@ -1,18 +1,12 @@
 import React from "react";
 
-import './servicesCard.css';
+import "./servicesCard.css";
 
-function ServicesCard({ url, title, onClick }) {
+function ServicesCard({ url, title, route, history }) {
   return (
-    <div className="services-card__wrapper">
-      <img
-        className="services-card__image"
-        alt={title}
-        src={url}
-      />
-      <div className="services-card__title">
-        {title}
-      </div>
+    <div className="services-card__wrapper" onClick={() => history.push(`/${route}`)}>
+      <img className="services-card__image" alt={title} src={url} />
+      <div className="services-card__title">{title}</div>
     </div>
   );
 }

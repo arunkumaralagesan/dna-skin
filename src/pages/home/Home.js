@@ -1,22 +1,30 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React, { Component } from "react";
 import _map from "lodash/map";
+import { Link } from "react-router-dom";
 import Layout from "../../components/organisms/layout";
 
 import PrimaryButton from "../../components/atoms/buttons/primary";
 import Awards from "../../components/molecules/awards";
 import ServicesCard from "../../components/molecules/servicesCard/ServicesCard";
 
-import { SERVICES, MAIN_TITLE_1, MAIN_TITLE_2, MAIN_CONTENT_1, TESTIMONIAL_VIDEOS, RATING_DETAILS, REVIEW_DETAILS } from "./constants";
+import {
+  SERVICES,
+  MAIN_TITLE_1,
+  MAIN_TITLE_2,
+  MAIN_CONTENT_1,
+  TESTIMONIAL_VIDEOS,
+  RATING_DETAILS,
+} from "./constants";
 import { isMobileDevice } from "../../helpers/utils";
 
 import "./home.css";
 import VideoWithTitle from "../../components/molecules/videoWithTitle/VideoWithTitle";
-import RatingsCard from '../../components/molecules/ratingsCard';
-import ReviewCarousel from './components/reviewCarousel';
-import AppointmentForm from './components/appointmentForm';
+import RatingsCard from "../../components/molecules/ratingsCard";
+import ReviewCarousel from "./components/reviewCarousel";
+import AppointmentForm from "./components/appointmentForm";
 
-import { VideoWithCenterPlay } from '../../components/molecules/videoWithTitle/VideoWithTitle';
+import { VideoWithCenterPlay } from "../../components/molecules/videoWithTitle/VideoWithTitle";
 
 class Home extends Component {
   renderMainBanner() {
@@ -70,7 +78,9 @@ class Home extends Component {
   renderAwards() {
     return (
       <section className="awards wrapper">
-        <div className="awards__title section-title">Awards And Recognitions</div>
+        <div className="awards__title section-title">
+          Awards And Recognitions
+        </div>
         <p className="awards__content">
           When Clients Come First, Awards Follow
         </p>
@@ -91,16 +101,17 @@ class Home extends Component {
   }
 
   renderServicesWeOffer() {
+    const { history } = this.props;
     return (
       <section className="services-container">
         <div className="services wrapper">
           <div className="services__title section-title">Services We Offer</div>
           <div className="services__cards">
             {_map(SERVICES, (service) => (
-              <ServicesCard {...service} />
+              <ServicesCard {...service} history={history} />
             ))}
           </div>
-          <PrimaryButton text="View All" className="services__view-all" />
+          {/* <PrimaryButton text="View All" className="services__view-all" /> */}
         </div>
         <img
           className="services__half-top"
@@ -134,8 +145,10 @@ class Home extends Component {
         </div>
         <div className="wrapper founder__container">
           <div className="founder__left">
-            <div className="founder__title section-title">About Our Founder</div>
-            <p className="founder__name">DR. PRIYANKA REDDY</p>
+            <div className="founder__title section-title">
+              About Our Founder
+            </div>
+            <div className="founder__name">DR. PRIYANKA REDDY</div>
             <p className="founder__info">
               Dr. Priyanka Reddy (M.B.B.S, M.D;D.V.L, Fellowship in Cosmetology
               from the USA) is a renowned dermatologist, cosmetologist, and
@@ -161,10 +174,10 @@ class Home extends Component {
               <div className="founder__insta">drpriyankareddy</div>
             </a>
             <img
-                src="/images/landing/s-shape.png"
-                alt="insta"
-                className="founder__s-shape"
-              />
+              src="/images/landing/s-shape.png"
+              alt="insta"
+              className="founder__s-shape"
+            />
           </div>
           <div className="founder__right"></div>
         </div>
@@ -175,16 +188,16 @@ class Home extends Component {
   renderStoryVideo() {
     return (
       <div className="our-story__video-player-wrapper">
-         <img
+        <img
           className="our-story__top"
           alt="DNA Skin"
           src="/images/common/circle-gray.png"
         />
         <VideoWithCenterPlay
-          url='https://www.youtube.com/watch?v=eAQIqSUcZK8'
-          thumbnail='https://img.youtube.com/vi/eAQIqSUcZK8/maxresdefault.jpg'
+          url="https://www.youtube.com/watch?v=eAQIqSUcZK8"
+          thumbnail="https://img.youtube.com/vi/eAQIqSUcZK8/maxresdefault.jpg"
         />
-         <img
+        <img
           className="our-story__bottom"
           alt="DNA Skin"
           src="/images/common/circle-gray.png"
@@ -213,11 +226,15 @@ class Home extends Component {
       <section className="testimonials-container">
         <div className="wrapper">
           <div className="testimonials">
-            <div className="testimonials__title section-title">Testimonials</div>
-            <div className="testimonials__videos-wrapper">
-              {_map(TESTIMONIAL_VIDEOS, video => <VideoWithTitle {...video} />)}
+            <div className="testimonials__title section-title">
+              Testimonials
             </div>
-            <PrimaryButton text="More Videos" className="testimonials__more-video" />
+            <div className="testimonials__videos-wrapper">
+              {_map(TESTIMONIAL_VIDEOS, (video) => (
+                <VideoWithTitle {...video} />
+              ))}
+            </div>
+            <Link to="/testimonials"><PrimaryButton text="More Videos" className="testimonials__more-video" /></Link>
           </div>
         </div>
       </section>
@@ -229,7 +246,9 @@ class Home extends Component {
       <section className="ratings wrapper">
         <p className="ratings__title section-title">Ratings and Reviews</p>
         <div className="rating__cards">
-          {_map(RATING_DETAILS, rating => <RatingsCard {...rating} />)}
+          {_map(RATING_DETAILS, (rating) => (
+            <RatingsCard {...rating} />
+          ))}
         </div>
         <ReviewCarousel />
       </section>
@@ -261,7 +280,6 @@ class Home extends Component {
 
   render() {
     const isMobile = isMobileDevice();
-    console.log({ isMobile });
     if (isMobile) return this.renderMobileView();
 
     return (

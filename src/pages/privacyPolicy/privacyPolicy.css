@@ -1,0 +1,8 @@
+.privacy__content {
+  color: var(--content-color);
+  font-size: 14px;
+
+  padding: 0rem 2rem 3rem 2rem;
+  line-height: 1.75;
+  word-break: break-word;
+}

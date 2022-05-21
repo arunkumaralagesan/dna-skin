@@ -2,26 +2,32 @@ export const SERVICES = [
   {
     title: "ACNE",
     url: "/images/landing/acne.png",
+    route: "acne",
   },
   {
     title: "SCARS",
     url: "/images/landing/scars.png",
+    route: "scars",
   },
   {
     title: "WRINKLES",
     url: "/images/landing/wrinkles.png",
+    route: "wrinkles",
   },
   {
     title: "HAIR TRANSPLANT",
     url: "/images/landing/hair-transplant.png",
+    route: "hair-transplant",
   },
   {
     title: "LASER HAIR REMOVAL",
     url: "/images/landing/laser.png",
+    route: "laser",
   },
   {
     title: "HAIR LOSS",
     url: "/images/landing/hair-loss.png",
+    route: "hair-loss",
   },
 ];
 
@@ -38,22 +44,22 @@ export const FOUNDER_INFO =
 export const TESTIMONIAL_VIDEOS = [
   {
     title: "Mr. Mohammad Ziad (treated for severe Psoriasis)",
-    url: 'https://youtu.be/ENsncNB8YLk',
-    thumbnail: 'https://img.youtube.com/vi/ENsncNB8YLk/maxresdefault.jpg',
+    url: "https://youtu.be/ENsncNB8YLk",
+    thumbnail: "https://img.youtube.com/vi/ENsncNB8YLk/maxresdefault.jpg",
   },
   {
     title: "Mrs. Rashmi ( came for acne scars)",
-    url: 'https://youtu.be/D6tMkxCU5p4',
-    thumbnail: 'https://img.youtube.com/vi/D6tMkxCU5p4/maxresdefault.jpg',
+    url: "https://youtu.be/D6tMkxCU5p4",
+    thumbnail: "https://img.youtube.com/vi/D6tMkxCU5p4/maxresdefault.jpg",
   },
   {
     title: "Miss. Sangee ( pigmentation & uneven skin tone)",
-    url: 'https://youtu.be/O1op_rCMjDs',
-    thumbnail: 'https://img.youtube.com/vi/O1op_rCMjDs/maxresdefault.jpg',
+    url: "https://youtu.be/O1op_rCMjDs",
+    thumbnail: "https://img.youtube.com/vi/O1op_rCMjDs/maxresdefault.jpg",
   },
   {
     title: "Mr. Magunta Srinuvasulu Reddy, Ex MP and current MLC",
-    url: 'https://youtu.be/gUVwAIsMcME',
+    url: "https://youtu.be/gUVwAIsMcME",
     thumbnail: "/images/landing/magunta.png",
   },
 ];
@@ -68,32 +74,36 @@ export const RATING_DETAILS = [
     url: "/images/common/practo.jpg",
     aggregate: 4.8,
     total: 234,
-  }
+  },
 ];
 
 export const REVIEW_DETAILS = [
   {
     url: "/images/landing/noodhana.png",
-    name: 'Noodhana Rachel',
+    name: "Noodhana Rachel",
     aggregate: 4.5,
-    content: 'They care as mother while v r with them thanks for ur love and care and the staffs in clinic made the surrounding alive with their friendly behaviour. Hope to come again and visit once for this hopefully therapy.',
+    content:
+      "They care as mother while v r with them thanks for ur love and care and the staffs in clinic made the surrounding alive with their friendly behaviour. Hope to come again and visit once for this hopefully therapy.",
   },
   {
     url: "/images/landing/suman.png",
-    name: 'Noodhana Rachel',
+    name: "Noodhana Rachel",
     aggregate: 4.5,
-    content: 'Visited this clinic for wart removal. Dr sajini did my procedure, she did it very quickly dint make me wait and the experience was worth paying. Highly recommend this place and dr. Thank you.',
+    content:
+      "Visited this clinic for wart removal. Dr sajini did my procedure, she did it very quickly dint make me wait and the experience was worth paying. Highly recommend this place and dr. Thank you.",
   },
   {
     url: "/images/landing/amjad.png",
-    name: 'Noodhana Rachel',
+    name: "Noodhana Rachel",
     aggregate: 4.5,
-    content: 'I consulted Dr. Sajini for Wart on my hand and she responded instant and treated it accordingly. I am totally convinced the way she removed it. I recommend this doctor. Thanks.',
+    content:
+      "I consulted Dr. Sajini for Wart on my hand and she responded instant and treated it accordingly. I am totally convinced the way she removed it. I recommend this doctor. Thanks.",
   },
   {
     url: "/images/landing/hair-loss.png",
-    name: 'Noodhana Rachel',
+    name: "Noodhana Rachel",
     aggregate: 4.5,
-    content: 'I consulted Dr. Sajini for Wart on my hand and she responded instant and treated it accordingly. I am totally convinced the way she removed it. I recommend this doctor. Thanks.',
+    content:
+      "I consulted Dr. Sajini for Wart on my hand and she responded instant and treated it accordingly. I am totally convinced the way she removed it. I recommend this doctor. Thanks.",
   },
 ];

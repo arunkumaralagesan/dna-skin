@@ -1,0 +1,42 @@
+.content {
+  color: var(--content-color);
+  font-size: 14px;
+
+  padding: 0rem 2rem 3rem 2rem;
+  line-height: 1.75;
+  word-break: break-word;
+}
+
+.testimonials-video-items-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.video-item {
+  width: 320px;
+  height: 190px;
+  margin: 1rem !important;
+}
+
+
+.more-videos {
+  margin: 3rem 0rem 5rem 0rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+  .more-videos {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+  }
+
+  .testimonials-video-items-container {
+    margin-bottom: 2rem;
+}
+}

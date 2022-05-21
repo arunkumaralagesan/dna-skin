@@ -111,6 +111,7 @@
   column-gap: 44px;
   row-gap: 40px;
   place-items: center;
+  padding-bottom: 8rem;
 }
 
 .services__view-all {
@@ -192,7 +193,7 @@
 }
 
 .founder__info {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: normal;
   text-align: left;
   line-height: 1.64;
@@ -203,7 +204,7 @@
 .founder__follow {
   text-align: left;
   color: #bfbfbf;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: normal;
   line-height: 1.5;
 }
@@ -217,14 +218,14 @@
 
 .founder__insta {
   color: var(--secondary-color);
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
   padding-left: 1rem;
 }
 
 .founder__insta-logo {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 
 .founder__right {
@@ -410,6 +411,7 @@
     flex-direction: column;
     padding: unset;
     position: relative;
+    padding-top: 2rem;
   }
 
   .main-banner__left {
@@ -500,6 +502,7 @@
     column-gap: 12px;
     row-gap: 40px;
     place-items: center;
+    padding-bottom: 3rem;
   }
 
   .services__view-all {
@@ -568,7 +571,7 @@
     grid-template-columns: unset;
     place-items: center;
     grid-row-gap: 10px;
-    row-gap: 10px;
+    row-gap: 25px;
   }
 
   .our-story__know-more {
@@ -587,7 +590,7 @@
   }
 
   .our-story__content {
-    font-size: var(--content-font-size);;
+    font-size: var(--content-font-size);
   }
 
   .review__cards {
@@ -630,7 +633,8 @@
   }
 
   .founder__info {
-    font-size: 12px;
+    font-size: 13px;
+    /* sweetspot number */
   }
 
   .founder__s-shape {

@@ -70,7 +70,7 @@
 }
 
 ::placeholder {
-  color: #BFBFBF;
+  color: #bfbfbf;
 }
 
 .button {
@@ -141,7 +141,7 @@
   }
 
   .form__contact {
-    font-size: var(--content-font-size);;
+    font-size: var(--content-font-size);
     padding-bottom: 0rem;
   }
 

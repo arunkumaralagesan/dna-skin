@@ -1,29 +1,33 @@
 export const CLINIC = [
   {
-    path: '/',
-    name: 'Home',
+    path: "/",
+    name: "Home",
   },
   {
-    path: '/',
-    name: 'About Us',
+    path: "/",
+    name: "About Us",
   },
   {
-    path: '/',
-    name: 'Contact',
-  }
+    path: "/",
+    name: "Contact",
+  },
 ];
 
 export const DISCOVER = [
   {
-    path: '/',
-    name: 'Home',
+    path: "/videos",
+    name: "Videos",
   },
   {
-    path: '/',
-    name: 'About Us',
+    path: "/",
+    name: "Blogs",
   },
   {
-    path: '/',
-    name: 'Contact',
-  }
+    path: "/terms-and-conditions",
+    name: "Terms & Conditions",
+  },
+  {
+    path: "/privacy-policy",
+    name: "Privacy Policy",
+  },
 ];

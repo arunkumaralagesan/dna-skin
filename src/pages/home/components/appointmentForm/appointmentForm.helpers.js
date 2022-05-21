@@ -1,8 +1,10 @@
-import _get from 'lodash/get';
+/* eslint-disable */
+import _get from "lodash/get";
 
-export const EMAIL_REGEX =  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+export const EMAIL_REGEX =
+  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-export const isValidEmail = email => EMAIL_REGEX.test(email);
+export const isValidEmail = (email) => EMAIL_REGEX.test(email);
 
 export const validateFormHelper = ({ formValues, displayError }) => {
   if (!displayError) return {};
@@ -22,7 +24,7 @@ export const validateFormHelper = ({ formValues, displayError }) => {
     formErrors.phone_number = "This filed is mandatory";
   }
 
-  if (email) {       
+  if (email) {
     const isValid = isValidEmail(email);
     if (!isValid) formErrors.email = "Email is not valid";
   } else {
@@ -35,10 +37,9 @@ export const validateFormHelper = ({ formValues, displayError }) => {
   return formErrors;
 };
 
-
 export const validateFormHelperPromise = ({ formValues, displayError }) => {
   if (!displayError) return Promise.resolve({});
-  
+
   const formErrors = {};
   const name = _get(formValues, "person_name");
   const phone = _get(formValues, "phone_number");
@@ -54,7 +55,7 @@ export const validateFormHelperPromise = ({ formValues, displayError }) => {
     formErrors.phone_number = "This filed is mandatory";
   }
 
-  if (email) {       
+  if (email) {
     const isValid = isValidEmail(email);
     if (!isValid) formErrors.email = "Email is not valid";
   } else {

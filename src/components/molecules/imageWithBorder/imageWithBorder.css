@@ -1,0 +1,20 @@
+.border_image_wrapper {
+  height: 380px;
+  width: fit-content;
+  border-radius: 20px;
+  border: 2px solid #41d8ba;
+  /* background-image: linear-gradient(to top, #36bbad, #41d8ba); */
+  margin-bottom: 3rem;
+  height: fit-content;
+  margin-left: 10px;
+}
+
+.border_image {
+  object-fit: contain;
+  width: 100%;
+  max-height: 380px;
+  position: relative;
+  left: -10px;
+  bottom: -8px;
+  border-radius: 20px;
+}

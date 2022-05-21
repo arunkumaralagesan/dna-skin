@@ -1,6 +1,6 @@
-import RouteNavigation from './routes/RouteNavigation';
+import RouteNavigation from "./routes/RouteNavigation";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   return (

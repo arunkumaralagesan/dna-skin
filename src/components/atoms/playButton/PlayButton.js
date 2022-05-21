@@ -4,7 +4,10 @@ import "./playButton.css";
 
 function PlayButton({ size, onClick }) {
   return (
-    <div className={cx("play__outer", { small: size === "s" })} onClick={onClick}>
+    <div
+      className={cx("play__outer", { small: size === "s" })}
+      onClick={onClick}
+    >
       <div className="play__inner">
         <img
           className="play__icon"

@@ -1,14 +1,15 @@
 import React, { Component } from "react";
+
 import _get from "lodash/get";
 import { DatePicker, Select } from "antd";
-import { message, Button, Space } from 'antd';
-import axios from "axios";
+import { message, Button, Space } from "antd";
 
 import { isMobileDevice } from "../../../../helpers/utils";
 
 import { PHONES } from "../../../../constants/general";
 import "./appointmentForm.css";
 import { validateFormHelper } from "./appointmentForm.helpers";
+import { sendMailNotification } from '../../../../helpers/email';
 
 const { Option } = Select;
 
@@ -164,47 +165,44 @@ export class AppointmentForm extends Component {
       const appointment = _get(formValues, "appointment");
       const query = _get(formValues, "query");
       const email = _get(formValues, "email");
+
+      const request = {
+        name,
+        phone,
+        date,
+        email,
+        treatment: appointment,
+        contact_mobile: phone,
+        query,
+      };
       this.setState({ formLoading: true });
-      axios
-        .post(
-          `https://sheet.best/api/sheets/ffa4e7fc-422a-492a-bb3c-7b681a24ceba`,
-          {
-            name,
-            phone,
-            date,
-            email,
-            treatment: appointment,
-            query,
-          }
-        )
-        .then(() => {
-          // toaster success
-          message.success({
-            content: 'Registeration success',
-            className: 'custom-class',
-            style: {
-              marginTop: '10vh',
-            },
-          });
-          this.setState({
-            formValues: {
-              person_name: "",
-              phone_number: "",
-              email: "",
-              date: "",
-              appointment: "",
-              query: "",
-              formErrors: {},
-              displayError: false,
-            },
-            formLoading: false,
-            myKey: Math.random() * 100,
-            displayError: false,
-          });
-        })
-        .catch(() => {
-          this.setState({ formLoading: false });
+      sendMailNotification(request).then(() => {
+        message.success({
+          content: "Registeration success",
+          className: "custom-class",
+          style: {
+            marginTop: "10vh",
+          },
         });
+        this.setState({
+          formValues: {
+            person_name: "",
+            phone_number: "",
+            email: "",
+            date: "",
+            appointment: "",
+            query: "",
+            formErrors: {},
+            displayError: false,
+          },
+          formLoading: false,
+          myKey: Math.random() * 100,
+          displayError: false,
+        });
+      })
+      .catch(() => {
+        this.setState({ formLoading: false });
+      });
     }
   };
 
@@ -212,7 +210,7 @@ export class AppointmentForm extends Component {
     const { formValues, formLoading } = this.state;
     const isMobile = isMobileDevice();
     return (
-      <div className="form-container">
+      <div className="form-container" id="appointment-form">
         <div className="form__title section-title">Request an Appointment</div>
         <div className="form__contact">
           Call Us:- <span>{`+91 ` + PHONES.ONE}</span>
@@ -244,7 +242,6 @@ export class AppointmentForm extends Component {
           ></textarea>
           <Button
             className="primary-button send-request"
-            type="submit"
             value="Submit"
             type="primary"
             onClick={this.handleSubmit}

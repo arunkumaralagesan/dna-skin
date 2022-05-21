@@ -1,12 +1,18 @@
-import React, { Component } from 'react';
-import Header from '../header';
-import Footer from '../footer';
+import React, { Component } from "react";
+import Header from "../header";
+import Footer from "../footer";
 
-import cx from 'classnames';
+import FloatMenu from "../../molecules/floatMenu/FloatMenu";
 
-import './layout.css';
+import cx from "classnames";
+
+import "./layout.css";
 
 class Layout extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   renderHeader() {
     return <Header />;
   }
@@ -16,12 +22,8 @@ class Layout extends Component {
   }
 
   renderChildren() {
-    const { children } = this.props
-    return (
-      <div className={cx('layout__children', '')}>
-        {children}
-      </div>
-    );
+    const { children } = this.props;
+    return <div className={cx("layout__children", "")}>{children}</div>;
   }
 
   render() {
@@ -30,8 +32,9 @@ class Layout extends Component {
         {this.renderHeader()}
         {this.renderChildren()}
         {this.renderFooter()}
+        <FloatMenu />
       </div>
-    )
+    );
   }
 }
 
